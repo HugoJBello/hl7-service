@@ -4,6 +4,7 @@
     "hl7Len": 1,
     "hl7DataType": "SI",
     "hl7OPT": "R",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Set ID – Obx",
 
     "dataType": "string",
@@ -14,6 +15,7 @@
     "hl7Len": 2,
     "hl7DataType": "ID",
     "hl7OPT": "R",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Value Type",
 
     "dataType": "string",
@@ -24,6 +26,7 @@
     "hl7Len": 590,
     "hl7DataType": "CE",
     "hl7OPT": "R",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Observation Identifier",
 
     "dataType": "string",
@@ -34,6 +37,7 @@
     "hl7Len": 20,
     "hl7DataType": "ST",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Observation Sub-Id",
 
     "dataType": "string",
@@ -44,6 +48,7 @@
     "hl7Len": 65536,
     "hl7DataType": "ST",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Observation Value",
 
     "dataType": "string",
@@ -54,6 +59,7 @@
     "hl7Len": 60,
     "hl7DataType": "CE",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Units",
 
     "dataType": "string",
@@ -64,6 +70,7 @@
     "hl7Len": 10,
     "hl7DataType": "ST",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Reference Range",
 
     "dataType": "string",
@@ -74,6 +81,7 @@
     "hl7Len": 5,
     "hl7DataType": "ID",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Abnormal Flags",
 
     "dataType": "string",
@@ -84,6 +92,7 @@
     "hl7Len": 5,
     "hl7DataType": "NM",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Probability",
 
     "dataType": "string",
@@ -94,6 +103,7 @@
     "hl7Len": 2,
     "hl7DataType": "ID",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Nature of Abnormal Test",
 
     "dataType": "string",
@@ -104,6 +114,7 @@
     "hl7Len": 1,
     "hl7DataType": "ID",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Observation Result Status",
 
     "dataType": "string",
@@ -114,6 +125,7 @@
     "hl7Len": 26,
     "hl7DataType": "TS",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Date Last Obs Normal Values",
 
     "dataType": "date",
@@ -124,6 +136,7 @@
     "hl7Len": 20,
     "hl7DataType": "ST",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "User Defined Access Checks",
 
     "dataType": "string",
@@ -134,6 +147,7 @@
     "hl7Len": 26,
     "hl7DataType": "TS",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Date/Time of the Observation",
 
     "dataType": "date",
@@ -144,6 +158,7 @@
     "hl7Len": 60,
     "hl7DataType": "CE",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Producer’s Id",
 
     "dataType": "string",
@@ -154,6 +169,7 @@
     "hl7Len": 80,
     "hl7DataType": "XCN",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Responsible Observer",
 
     "dataType": "string",
@@ -164,6 +180,7 @@
     "hl7Len": 80,
     "hl7DataType": "CE",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Observation Method",
 
     "dataType": "string",

@@ -4,6 +4,7 @@
     "hl7Len": 4,
     "hl7DataType": "SI",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Set ID – Patient ID",
 
     "dataType": "string",
@@ -14,6 +15,7 @@
     "hl7Len": 20,
     "hl7DataType": "CX",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Patient ID (External ID)",
 
     "dataType": "string",
@@ -24,6 +26,7 @@
     "hl7Len": 20,
     "hl7DataType": "CX",
     "hl7OPT": "R",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Patient ID (Internal ID)",
 
     "dataType": "string",
@@ -34,6 +37,7 @@
     "hl7Len": 20,
     "hl7DataType": "CX",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Alternate Patient ID – PID",
 
     "dataType": "string",
@@ -44,6 +48,7 @@
     "hl7Len": 48,
     "hl7DataType": "XPN",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Patient Name",
 
     "dataType": "string",
@@ -54,6 +59,7 @@
     "hl7Len": 48,
     "hl7DataType": "XPN",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Mother’s Maiden Name",
 
     "dataType": "string",
@@ -64,6 +70,7 @@
     "hl7Len": 26,
     "hl7DataType": "TS",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Date/Time of Birth",
 
     "dataType": "date",
@@ -74,16 +81,18 @@
     "hl7Len": 1,
     "hl7DataType": "IS",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Sex",
 
     "dataType": "string",
-    "componentName": "Sex"
+    "componentName": "sex"
   },
   {
     "sequence": 9,
     "hl7Len": 48,
     "hl7DataType": "XPN",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Patient Alias",
 
     "dataType": "string",
@@ -94,6 +103,7 @@
     "hl7Len": 1,
     "hl7DataType": "IS",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Race",
 
     "dataType": "string",
@@ -104,6 +114,7 @@
     "hl7Len": 106,
     "hl7DataType": "XAD",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Patient Address",
 
     "dataType": "string",
@@ -114,6 +125,7 @@
     "hl7Len": 4,
     "hl7DataType": "IS",
     "hl7OPT": "B",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Country Code",
 
     "dataType": "string",
@@ -124,6 +136,7 @@
     "hl7Len": 40,
     "hl7DataType": "XTN",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Phone Number – Home",
 
     "dataType": "string",
@@ -134,6 +147,7 @@
     "hl7Len": 40,
     "hl7DataType": "XTS",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Phone Number – Business",
 
     "dataType": "string",
@@ -144,6 +158,7 @@
     "hl7Len": 60,
     "hl7DataType": "CE",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Primary Language",
 
     "dataType": "string",
@@ -154,6 +169,7 @@
     "hl7Len": 1,
     "hl7DataType": "CE",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "marital Status",
 
     "dataType": "string",
@@ -164,6 +180,7 @@
     "hl7Len": 2,
     "hl7DataType": "IS",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Religion",
 
     "dataType": "string",
@@ -174,6 +191,7 @@
     "hl7Len": 20,
     "hl7DataType": "CX",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Patient Account Number",
 
     "dataType": "string",
@@ -184,6 +202,7 @@
     "hl7Len": 16,
     "hl7DataType": "ST",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "SSN Number – Patient",
 
     "dataType": "string",
@@ -194,6 +213,7 @@
     "hl7Len": 25,
     "hl7DataType": "DLN",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Driver’s License Number - Patient",
 
     "dataType": "string",
@@ -204,6 +224,7 @@
     "hl7Len": 20,
     "hl7DataType": "CX",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Mother’s Identifier",
 
     "dataType": "string",
@@ -214,6 +235,7 @@
     "hl7Len": 3,
     "hl7DataType": "CX",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Ethnic Group",
 
     "dataType": "string",
@@ -224,6 +246,7 @@
     "hl7Len": 60,
     "hl7DataType": "ST",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Birth Place",
 
     "dataType": "string",
@@ -234,6 +257,7 @@
     "hl7Len": 2,
     "hl7DataType": "ID",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Multiple Birth Indicator",
 
     "dataType": "string",
@@ -244,6 +268,7 @@
     "hl7Len": 2,
     "hl7DataType": "NM",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Birth Order",
 
     "dataType": "string",
@@ -254,6 +279,7 @@
     "hl7Len": 4,
     "hl7DataType": "IS",
     "hl7OPT": "0",
+    "hl7Repeatability": true,
     "hl7ComponentName": "Citizenship",
 
     "dataType": "string",
@@ -264,6 +290,7 @@
     "hl7Len": 60,
     "hl7DataType": "CE",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Veterans Military Status",
 
     "dataType": "string",
@@ -274,6 +301,7 @@
     "hl7Len": 80,
     "hl7DataType": "CE",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Nationality",
 
     "dataType": "string",
@@ -284,6 +312,7 @@
     "hl7Len": 26,
     "hl7DataType": "TS",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Patient Death Date and Time",
 
     "dataType": "date",
@@ -294,6 +323,7 @@
     "hl7Len": 1,
     "hl7DataType": "ID",
     "hl7OPT": "0",
+    "hl7Repeatability": false,
     "hl7ComponentName": "Patient Death Indicator",
 
     "dataType": "string",

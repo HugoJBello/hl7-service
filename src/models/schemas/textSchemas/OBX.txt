@@ -1,4 +1,5 @@
 OBX
+https://hl7-definition.caristix.com/v2/HL7v2.5.1/Segments/OBX
 SEQ	LEN	DT	OPT	RP/#	ELEMENT NAME
 1	4	SI	O	 	Set ID – Obx
 2	2	ID	R	 	Value Type

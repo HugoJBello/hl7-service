@@ -15,7 +15,7 @@ https://github.com/ruby-hl7/ruby-hl7/tree/master/test_data
 # hl7 generalities
 
 https://www.lyniate.com/knowledge-hub/hl7-separator-character-codes/
-
+https://www.lyniate.com/knowledge-hub/hl7-data-types/
 # hl7 and glucose
 glucose must be an observation:
 

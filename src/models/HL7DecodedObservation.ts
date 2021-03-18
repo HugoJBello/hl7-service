@@ -8,19 +8,19 @@ const HL7DecodedObservationSchema = new mongoose.Schema({
   valueType: String,
   observationIdentifier: String,
   observationSubId: String,
-  observationValue: String,
+  observationValue: Array(String),
   units: String,
   referenceRange: String,
-  abnormalFlags: String,
+  abnormalFlags: Array(String),
   probability: String,
-  natureAbnormalTest: String,
+  natureAbnormalTest: Array(String),
   observationResultStatus: String,
   dataLastObsNormalValues: Date,
   userDefinedAccessChecks: String,
   dateOfObservation: Date,
   producerId: String,
-  responsibleObserver: String,
-  observationMethod: String
+  responsibleObserver: Array(String),
+  observationMethod: Array(String)
 }, { timestamps: true });
 
 export interface HL7DecodedObservationI {
@@ -29,19 +29,19 @@ export interface HL7DecodedObservationI {
   valueType: string,
   observationIdentifier: string
   observationSubId: string
-  observationValue: string
+  observationValue: string[]
   units: string
   referenceRange: string
-  abnormalFlags: string
+  abnormalFlags: string[]
   probability: string
-  natureAbnormalTest: string
+  natureAbnormalTest: string[]
   observationResultStatus: string
   dataLastObsNormalValues: Date
   userDefinedAccessChecks: string
   dateOfObservation: string
   producerId: string
-  responsibleObserver: string
-  observationMethod: string
+  responsibleObserver: string[]
+  observationMethod: string[]
 }
 
 export const HL7DecodedObservation = mongoose.model<HL7DecodedObservationDocument>("HL7DecodedObservation", HL7DecodedObservationSchema);

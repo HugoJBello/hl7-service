@@ -4,50 +4,68 @@ export type HL7DecodedMessageHeaderDocument = mongoose.Document & HL7DecodedMess
 
 const HL7DecodedMessageHeaderSchema = new mongoose.Schema({
   id: String,
-  fieldSeparator: String,
-  encodingCharacters: String,
-  sendingApplication: String,
-  sendingFacility: String,
-  receivingApplication: String,
-  receivingFacility: String,
-  dateOfMessage: Date,
-  security: String,
-  messageType: String,
-  messageControlId: String,
-  processingId: String,
-  versionId: String,
-  sequenceNumber: String,
-  continuationPointer: String,
-  acceptAcknowledgmentType: String,
-  applicationAcknowledgmentType: String,
+  setIdPatientId: String,
+  patientIdExternalId: String,
+  patientIdInternalId: String,
+  alternatePatientId: String,
+  patientName: String,
+  motherMaidenName: String,
+  dateOfBirth: Date,
+  sex: String,
+  patientAlias: String,
+  race: String,
+  patientAddress: String,
   countryCode: String,
-  characterSet: String,
-  principalLanguageMessage: String,
-  alternateCharacterSetHandlingScheme: String
+  phoneNumberHome: String,
+  phoneNumberBusiness: String,
+  primaryLanguage: String,
+  maritalStatus: String,
+  religion: String,
+  patientAccountNumber: Array(String),
+  sSNNumberPatient: String,
+  driverLicenseNumberPatient: String,
+  motherIdentifier: String,
+  ethnicGroup: String,
+  birthPlace: String,
+  multipleBirthIndicator: String,
+  birthOrder: String,
+  veteransMilitaryStatus: String,
+  mationality: String,
+  patientDeathDate: String,
+  patientDeathIndicator: String,
 }, { timestamps: true });
 
 export interface HL7DecodedMessageHeaderI {
   id: string
-  fieldSeparator: string
-  encodingCharacters: string
-  sendingApplication: string
-  sendingFacility: string
-  receivingApplication: string
-  receivingFacility: string
-  dateOfMessage: Date
-  security: string
-  messageType: string
-  messageControlId: string
-  processingId: string
-  versionId: string
-  sequenceNumber: string
-  continuationPointer: string
-  acceptAcknowledgmentType: string
-  applicationAcknowledgmentType: string
+  setIdPatientId: string
+  patientIdExternalId: string
+  patientIdInternalId: string
+  alternatePatientId: string
+  patientName: string
+  motherMaidenName: string
+  dateOfBirth: Date,
+  sex: string
+  patientAlias: string
+  race: string
+  patientAddress: string
   countryCode: string
-  characterSet: string
-  principalLanguageMessage: string
-  alternateCharacterSetHandlingScheme: string
+  phoneNumberHome: string
+  phoneNumberBusiness: string
+  primaryLanguage: string
+  maritalStatus: string
+  religion: string
+  patientAccountNumber: string
+  sSNNumberPatient: string
+  driverLicenseNumberPatient: string
+  motherIdentifier: string
+  ethnicGroup: string
+  birthPlace: string
+  multipleBirthIndicator: string
+  birthOrder: string
+  veteransMilitaryStatus: string
+  mationality: string
+  patientDeathDate: string
+  patientDeathIndicator: string
 }
 
 export const HL7DecodedMessageHeader = mongoose.model<HL7DecodedMessageHeaderDocument>("HL7DecodedMessageHeader", HL7DecodedMessageHeaderSchema);
