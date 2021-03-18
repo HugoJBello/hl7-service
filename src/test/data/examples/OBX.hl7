@@ -1,0 +1,10 @@
+OBX|1|SN|1554-5^GLUCOSE^POST 12H CFST:MCNC:PT:SER/PLAS:QN||^182|mg/dl|70_105|H|||F
+OBX||TX|FIND^FINDINGS^L|1|This is a test on 05/02/94.
+OBX||TX|FIND^FINDINGS^L|2|This is a test for the CRR.
+OBX||TX|FIND^FINDINGS^L|3|This is a test result to generate multiple obr's to check the cost
+OBX||TX|FIND^FINDINGS^L|4|display for multiple exams.
+OBX||TX|FIND^FINDINGS^L|5|APPROVING MD:
+OBX||TX|FIND^FINDINGS^L|1|This is a test on 05/02/94.
+OBX||TX|FIND^FINDINGS^L|2|This is a test for the CRR.
+OBX||TX|FIND^FINDINGS^L|3|This is a test result to generate multiple obr's to check the cost
+OBX||TX|FIND^FINDINGS^L|2|This is a test for the CRR.

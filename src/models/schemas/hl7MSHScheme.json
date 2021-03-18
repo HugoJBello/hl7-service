@@ -1,0 +1,202 @@
+[
+  {
+    "sequence": 1,
+    "hl7Len": 1,
+    "hl7DataType": "ST",
+    "hl7OPT": "R",
+    "hl7ComponentName": "Field Separator",
+
+    "dataType": "string",
+    "componentName": "fieldSeparator"
+  },
+  {
+    "sequence": 2,
+    "hl7Len": 4,
+    "hl7DataType": "ST",
+    "hl7OPT": "R",
+    "hl7ComponentName": "Encoding Characters",
+
+    "dataType": "string",
+    "componentName": "encodingCharacters"
+  },
+  {
+    "sequence": 3,
+    "hl7Len": 180,
+    "hl7DataType": "HD",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Sending Application",
+
+    "dataType": "string",
+    "componentName": "sendingApplication"
+  },
+  {
+    "sequence": 4,
+    "hl7Len": 180,
+    "hl7DataType": "HD",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Sending Facility",
+
+    "dataType": "string",
+    "componentName": "sendingFacility"
+  },
+  {
+    "sequence": 5,
+    "hl7Len": 180,
+    "hl7DataType": "HD",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Receiving Application",
+
+    "dataType": "string",
+    "componentName": "receivingApplication"
+  },
+  {
+    "sequence": 6,
+    "hl7Len": 180,
+    "hl7DataType": "HD",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Receiving Facility",
+
+    "dataType": "string",
+    "componentName": "receivingFacility"
+  },
+  {
+    "sequence": 7,
+    "hl7Len": 26,
+    "hl7DataType": "TS",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Date/Time Of Message",
+
+    "dataType": "date",
+    "componentName": "dateOfMessage"
+  },
+  {
+    "sequence": 8,
+    "hl7Len": 40,
+    "hl7DataType": "ST",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Security",
+
+    "dataType": "string",
+    "componentName": "security"
+  },
+  {
+    "sequence": 9,
+    "hl7Len": 7,
+    "hl7DataType": "MSG",
+    "hl7OPT": "R",
+    "hl7ComponentName": "Message Type",
+
+    "dataType": "string",
+    "componentName": "messageType"
+  },
+  {
+    "sequence": 10,
+    "hl7Len": 20,
+    "hl7DataType": "ST",
+    "hl7OPT": "R",
+    "hl7ComponentName": "Message Control ID",
+
+    "dataType": "string",
+    "componentName": "messageControlId"
+  },
+  {
+    "sequence": 11,
+    "hl7Len": 3,
+    "hl7DataType": "PT",
+    "hl7OPT": "R",
+    "hl7ComponentName": "Processing ID",
+
+    "dataType": "string",
+    "componentName": "processingId"
+  },
+  {
+    "sequence": 12,
+    "hl7Len": 60,
+    "hl7DataType": "VID",
+    "hl7OPT": "R",
+    "hl7ComponentName": "Version ID",
+
+    "dataType": "string",
+    "componentName": "versionId"
+  },
+  {
+    "sequence": 13,
+    "hl7Len": 15,
+    "hl7DataType": "NM",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Sequence Number",
+
+    "dataType": "string",
+    "componentName": "sequenceNumber"
+  },
+  {
+    "sequence": 14,
+    "hl7Len": 180,
+    "hl7DataType": "ST",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Continuation Pointer",
+
+    "dataType": "string",
+    "componentName": "continuationPointer"
+  },
+  {
+    "sequence": 15,
+    "hl7Len": 2,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Accept Acknowledgment Type",
+
+    "dataType": "string",
+    "componentName": "acceptAcknowledgmentType"
+  },
+  {
+    "sequence": 16,
+    "hl7Len": 2,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Application Acknowledgment Type",
+
+    "dataType": "string",
+    "componentName": "applicationAcknowledgmentType"
+  },
+  {
+    "sequence": 17,
+    "hl7Len": 2,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Country Code",
+
+    "dataType": "string",
+    "componentName": "countryCode"
+  },
+  {
+    "sequence": 18,
+    "hl7Len": 16,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Character Set",
+
+    "dataType": "string",
+    "componentName": "characterSet"
+  },
+  {
+    "sequence": 19,
+    "hl7Len": 60,
+    "hl7DataType": "CE",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Principal Language Of Message",
+
+    "dataType": "string",
+    "componentName": "principalLanguageMessage"
+  },
+  {
+    "sequence": 20,
+    "hl7Len": 20,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7ComponentName": "Alternate Character Set Handling Scheme",
+
+    "dataType": "string",
+    "componentName": "alternateCharacterSetHandlingScheme"
+  }
+]
