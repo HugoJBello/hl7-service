@@ -23,4 +23,6 @@ https://hl7-definition.caristix.com/v2/HL7v2.5/Segments/OBX
 
 https://hl7-definition.caristix.com/v2/HL7v2.7/Fields/OBX.11
 
+http://www.hl7.eu/refactored/segOBX.html
+
 https://github.com/amida-tech/hl7/blob/master/lib/segments/OBX.txt

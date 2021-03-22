@@ -38,7 +38,7 @@ export interface HL7DecodedObservationI {
   observationResultStatus: string
   dataLastObsNormalValues: Date
   userDefinedAccessChecks: string
-  dateOfObservation: string
+  dateObservation: string
   producerId: string
   responsibleObserver: string[]
   observationMethod: string[]

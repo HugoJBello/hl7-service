@@ -8,6 +8,7 @@ export interface SchemeField {
   hl7DataType: string
   hl7OPT: string
   hl7ComponentName: string
+  hl7Repeatability: boolean
   dataType: string
   componentName: string
 }
