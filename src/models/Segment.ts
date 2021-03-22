@@ -1,0 +1,6 @@
+export enum Segment {
+  OBSERVATION ="OBS",
+  MESSAGE_HEADER= "MSH",
+  PATIENT_IDENTIFICATION = "PID",
+  NOTE = "NTE"
+}
