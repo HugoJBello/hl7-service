@@ -1,0 +1,322 @@
+[
+  {
+    "sequence": 1,
+    "hl7Len": 0,
+    "hl7DataType": "NM",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Sub-Id counter",
+    "dataType": "string",
+    "componentName": "giveSubIdCounter"
+  },
+  {
+    "sequence": 2,
+    "hl7Len": 20,
+    "hl7DataType": "NM",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Dispense Sub-Id counter",
+    "dataType": "string",
+    "componentName": "dispenseSubIdCounter"
+  },
+  {
+    "sequence": 3,
+    "hl7Len": 0,
+    "hl7DataType": "ST",
+    "hl7OPT": "W",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "Quantity/Timing",
+    "dataType": "string",
+    "componentName": "quantity"
+  },
+  {
+    "sequence": 4,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give code",
+    "dataType": "string",
+    "componentName": "giveCode"
+  },
+  {
+    "sequence": 5,
+    "hl7Len": 0,
+    "hl7DataType": "NM",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Amount Minimum",
+    "dataType": "string",
+    "componentName": "giveAmountMinimum"
+  },
+  {
+    "sequence": 6,
+    "hl7Len": 0,
+    "hl7DataType": "NM",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Amount Maximum",
+    "dataType": "string",
+    "componentName": "giveAmountMaximum"
+  },
+  {
+    "sequence": 7,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Units",
+    "dataType": "string",
+    "componentName": "giveUnits"
+  },
+  {
+    "sequence": 8,
+    "hl7Len": 1,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Dosage",
+    "dataType": "string",
+    "componentName": "giveDosage"
+  },
+  {
+    "sequence": 9,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "Administration Notes",
+    "dataType": "string",
+    "componentName": "administrationNotes"
+  },
+  {
+    "sequence": 10,
+    "hl7Len": 0,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Substitution Status",
+    "dataType": "string",
+    "componentName": "substitutionStatus"
+  },
+  {
+    "sequence": 11,
+    "hl7Len": 0,
+    "hl7DataType": "ST",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Dispense to loaction",
+    "dataType": "string",
+    "componentName": "dispenseToLocation"
+  },
+  {
+    "sequence": 12,
+    "hl7Len": 0,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Needs human Review",
+    "dataType": "string",
+    "componentName": "needsHumanReview"
+  },
+  {
+    "sequence": 13,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "Pharmacy/Treatment Suplier special administration instruction",
+    "dataType": "string",
+    "componentName": "treatmentSpecialAdminInstruction"
+  },
+  {
+    "sequence": 14,
+    "hl7Len": 0,
+    "hl7DataType": "ST",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Per Give (time unit)",
+    "dataType": "string",
+    "componentName": "perGiveTimeUnit"
+  },
+  {
+    "sequence": 15,
+    "hl7Len": 0,
+    "hl7DataType": "ST",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Rate Amount",
+    "dataType": "string",
+    "componentName": "giveRateAmount"
+  },
+  {
+    "sequence": 16,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Rate Units",
+    "dataType": "string",
+    "componentName": "giveRateUnits"
+  },
+  {
+    "sequence": 17,
+    "hl7Len": 2,
+    "hl7DataType": "NM",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Strength",
+    "dataType": "string",
+    "componentName": "giveStrength"
+  },
+  {
+    "sequence": 18,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Strength Units",
+    "dataType": "string",
+    "componentName": "giveStrengthUnits"
+  },
+  {
+    "sequence": 19,
+    "hl7Len": 0,
+    "hl7DataType": "ST",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "Substance Lot Number",
+    "dataType": "string",
+    "componentName": "substanceLotNumber"
+  },
+  {
+    "sequence": 20,
+    "hl7Len": 0,
+    "hl7DataType": "DTM",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "Substance Expiration Date",
+    "dataType": "date",
+    "componentName": "substanceExpirationDate"
+  },
+  {
+    "sequence": 21,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "Substance Manufacturer Name",
+    "dataType": "date",
+    "componentName": "substanceManufacturerName"
+  },
+  {
+    "sequence": 23,
+    "hl7Len": 0,
+    "hl7DataType": "MN",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Drug Strength Volume",
+    "dataType": "string",
+    "componentName": "giveDrugStrengthVolume"
+  },
+  {
+    "sequence": 24,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Drug Strength Volume Units",
+    "dataType": "string",
+    "componentName": "giveDrugStrengthVolumeUnits"
+  },
+  {
+    "sequence": 25,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Barcode Identifier",
+    "dataType": "string",
+    "componentName": "giveBarcodeIdentifier"
+  },
+  {
+    "sequence": 26,
+    "hl7Len": 0,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Pharmacy Order Type",
+    "dataType": "string",
+    "componentName": "pharmacyOrderType"
+  },
+  {
+    "sequence": 27,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Dispense To Pharmacy",
+    "dataType": "string",
+    "componentName": "dispenseToPharmacy"
+  },
+  {
+    "sequence": 28,
+    "hl7Len": 0,
+    "hl7DataType": "XAD",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Dispense To Pharmacy Address",
+    "dataType": "string",
+    "componentName": "dispenseToPharmacyAddress"
+  },
+  {
+    "sequence": 29,
+    "hl7Len": 0,
+    "hl7DataType": "PL",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Deliver to patient location",
+    "dataType": "string",
+    "componentName": "deliverToPatientLocation"
+  },
+  {
+    "sequence": 30,
+    "hl7Len": 0,
+    "hl7DataType": "XAD",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Deliver to patient address",
+    "dataType": "string",
+    "componentName": "deliverToAddress"
+  },
+  {
+    "sequence": 31,
+    "hl7Len": 0,
+    "hl7DataType": "EI",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "Give Tag Identifier",
+    "dataType": "string",
+    "componentName": "giveTagIdentifier"
+  },
+  {
+    "sequence": 32,
+    "hl7Len": 0,
+    "hl7DataType": "MN",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Dispense Amount",
+    "dataType": "string",
+    "componentName": "dispenseAmount"
+  },
+  {
+    "sequence": 33,
+    "hl7Len": 1,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Dispense Units ",
+    "dataType": "string",
+    "componentName": "dispenseUnits"
+  }
+]

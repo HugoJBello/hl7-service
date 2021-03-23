@@ -1,15 +1,14 @@
 import mongoose from "mongoose";
 
-export type HL7MessageDocument = mongoose.Document & HL7MessageI
+export type HL7MessageDocument = mongoose.Document & HL7MessageRawBody
 
-const HL7MessageSchema = new mongoose.Schema({
+const HL7MessageRawBodySchema = new mongoose.Schema({
   payload: String,
   id: String
 }, { timestamps: true });
 
-export interface HL7MessageI {
+export interface HL7MessageRawBody {
   payload: string
-  id: string
 }
 
-export const HL7Message = mongoose.model<HL7MessageDocument>("HL7Message", HL7MessageSchema);
+export const HL7Message = mongoose.model<HL7MessageDocument>("HL7Message", HL7MessageRawBodySchema);

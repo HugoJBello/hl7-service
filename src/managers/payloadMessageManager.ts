@@ -1,26 +1,24 @@
-import { SchemeField } from "../models/Schema";
-import { Segment } from "../models/Segment";
+import { Hl7Segment } from "../models/Segment";
 
 const separator = "|";
 const arraySeparator = "^";
 
-export interface MessagePart {
-  hl7Key: Segment
+export interface MessageSegmentPart {
+  hl7Key: Hl7Segment
   hl7BodyPart: string
 }
 
-const extractLine = (line:string):MessagePart =>{
-  if (!line.includes("|")) {
+const extractLine = (line:string):MessageSegmentPart =>{
+  if (!line.includes(separator)) {
     throw new Error("incorrect format in line " + line)
   }
-  const key = line.split("|")[0] as Segment
-  const bodyPart = line
-  const message = {hl7Key: key, hl7BodyPart:bodyPart} as MessagePart
+  const key = line.split(separator)[0] as Hl7Segment
+  const message = {hl7Key: key, hl7BodyPart:line} as MessageSegmentPart
   return message
 }
 
-export const separatePayload = (hl7Payload: string): MessagePart[] => {
-  const messageParts = [] as MessagePart[]
+export const separateSegmentPart = (hl7Payload: string): MessageSegmentPart[] => {
+  const messageParts = [] as MessageSegmentPart[]
   if (hl7Payload.includes("\n")) {
     for (let line of hl7Payload.split("\n")){
       const message = extractLine(line)

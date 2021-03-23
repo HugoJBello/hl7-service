@@ -4,18 +4,24 @@ const separator = "|";
 const arraySeparator = "^";
 
 export interface Hl7ParsedObject {
-  [key:string]: Object
+  [key: string]: Object
 }
 
 export const parseHl7Date = (dateStr: string) => {
-  return  new Date(dateStr.replace(
-    /^(\d{4})(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/,
-    '$4:$5:$6 $2/$3/$1'
-  ));
+  if (dateStr.length === 8) {
+    return new Date(dateStr.replace(
+      /^(\d{4})(\d\d)(\d\d)$/,
+      "$2/$3/$1",
+    ));
+  } else if (dateStr.length === 14)
+    return new Date(dateStr.replace(
+      /^(\d{4})(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/,
+      "$4:$5:$6 $2/$3/$1",
+    ));
 };
 
-export const parseItemUsingSchema = (hl7Item: string, schema: SchemeField[]): Object => {
-  const result ={} as Hl7ParsedObject
+export const parseStringSegmentUsingSchema = (hl7Item: string, schema: SchemeField[]): Object => {
+  const result = {} as Hl7ParsedObject;
 
   const parts = hl7Item.split(separator);
 
@@ -29,8 +35,8 @@ export const parseItemUsingSchema = (hl7Item: string, schema: SchemeField[]): Ob
 
   schema.forEach(((field, index) => {
     const currentPart = parts[index + 1];
-    if (!currentPart || currentPart == "") return
-    const name = field.componentName
+    if (!currentPart || currentPart == "") return;
+    const name = field.componentName;
 
     if (field.hl7Repeatability === true) {
       let value;
@@ -45,13 +51,13 @@ export const parseItemUsingSchema = (hl7Item: string, schema: SchemeField[]): Ob
           value = parseHl7Date(value);
         }
       }
-      result[name] = value
+      result[name] = value;
     } else {
-      let value = currentPart as any
+      let value = currentPart as any;
       if (field.dataType == "date") {
-        value =  parseHl7Date(value)
+        value = parseHl7Date(value);
       }
-      result[name] = value
+      result[name] = value;
     }
   }));
 

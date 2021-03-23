@@ -185,5 +185,59 @@
 
     "dataType": "string",
     "componentName": "observationMethod"
+  },
+  {
+    "sequence": 18,
+    "hl7Len": 0,
+    "hl7DataType": "EI",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Equipment Instance Identifier",
+    "dataType": "string",
+    "componentName": "equipmentInstanceIdentifier"
+  },
+  {
+    "sequence": 19,
+    "hl7Len": 0,
+    "hl7DataType": "DTM",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Date/Time Of The Analysis",
+
+    "dataType": "date",
+    "componentName": "dateOfAnalysis"
+  },
+  {
+    "sequence": 20,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "Observation Site",
+
+    "dataType": "string",
+    "componentName": "observationSite"
+  },
+  {
+    "sequence": 21,
+    "hl7Len": 0,
+    "hl7DataType": "EI",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Observation Instance Identifier",
+
+    "dataType": "string",
+    "componentName": "observationInstanceIdentifier"
+  },
+  {
+    "sequence": 22,
+    "hl7Len": 0,
+    "hl7DataType": "CNE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Mood Code",
+
+    "dataType": "string",
+    "componentName": "moodCode"
   }
 ]

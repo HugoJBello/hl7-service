@@ -1,9 +1,13 @@
 import { app } from "./app";
 
+import { appHl7 } from "./appHl7";
+
 const port = app.get("port");
 
 const server = app.listen(port, onListening);
 server.on("error", onError);
+
+appHl7.start(7777);
 
 function onError(error: any) {
   if (error.syscall !== "listen") {

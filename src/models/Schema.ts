@@ -1,6 +1,7 @@
-import hl7MSHScheme from './schemas/hl7MSHSchema.json';
-import hl7OBXScheme from './schemas/hl7OBXSchema.json';
-import hl7PIDScheme from './schemas/hl7PIDSchema.json';
+import hl7MSHSchemeV5 from './schemas/hl7MSHSchemaV2.5.json';
+import hl7OBXSchemeV5 from './schemas/hl7OBXSchemaV2.5.json';
+import hl7OBXSchemeV8 from './schemas/hl7OBXSchemaV2.8.json';
+import hl7PIDScheme from './schemas/hl7PIDSchemaV2.5.json';
 
 export interface SchemeField {
   sequence: number
@@ -13,6 +14,7 @@ export interface SchemeField {
   componentName: string
 }
 
-export const HL7MessageHeaderSchema = hl7MSHScheme as SchemeField[]
-export const HL7ObservationSchema = hl7OBXScheme as SchemeField[]
+export const HL7MessageHeaderSchemaV5 = hl7MSHSchemeV5 as SchemeField[]
+export const HL7ObservationSchemaV5 = hl7OBXSchemeV5 as SchemeField[]
+export const HL7ObservationSchemaV8 = hl7OBXSchemeV8 as SchemeField[]
 export const HL7PersonIdentificationSchema = hl7PIDScheme as SchemeField[]

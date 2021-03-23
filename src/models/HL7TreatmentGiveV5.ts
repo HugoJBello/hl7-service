@@ -1,9 +1,13 @@
 import mongoose from "mongoose";
+import { DecodedSegmentBase, Hl7Segment } from "./Segment";
 
-export type HL7DecodedPatientIdentificationDocument = mongoose.Document & HL7DecodedPatientIdentificationI
+export type HL7DecodedTreatmentGiveDocument = mongoose.Document & HL7DecodedTreatmentGiveV5I
 
-const HL7DecodedPatientIdentificatorSchema = new mongoose.Schema({
+const HL7DecodedTreatmentGiveSchemaV5 = new mongoose.Schema({
+  segment: String,
   id: String,
+  hl7version: String,
+
   fieldSeparator: String,
   encodingCharacters: String,
   sendingApplication: String,
@@ -26,8 +30,7 @@ const HL7DecodedPatientIdentificatorSchema = new mongoose.Schema({
   alternateCharacterSetHandlingScheme: String
 }, { timestamps: true });
 
-export interface HL7DecodedPatientIdentificationI {
-  id: string
+export interface HL7DecodedTreatmentGiveV5I extends DecodedSegmentBase{
   fieldSeparator: string
   encodingCharacters: string
   sendingApplication: string
@@ -50,4 +53,4 @@ export interface HL7DecodedPatientIdentificationI {
   alternateCharacterSetHandlingScheme: string
 }
 
-export const HL7DecodedPatientIdentification = mongoose.model<HL7DecodedPatientIdentificationDocument>("HL7DecodedPatientIdentification", HL7DecodedPatientIdentificatorSchema);
+export const HL7DecodedTreatmentGiveV5 = mongoose.model<HL7DecodedTreatmentGiveDocument>("HL7DecodedTreatmentGive", HL7DecodedTreatmentGiveSchemaV5);

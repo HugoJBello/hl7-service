@@ -1,9 +1,13 @@
 import mongoose from "mongoose";
+import { DecodedSegmentBase, Hl7Segment } from "./Segment";
 
-export type HL7DecodedMessageHeaderDocument = mongoose.Document & HL7DecodedMessageHeaderI
+export type HL7DecodedMessageHeaderDocument = mongoose.Document & HL7DecodedMessageHeaderV5I
 
-const HL7DecodedMessageHeaderSchema = new mongoose.Schema({
+const HL7DecodedMessageHeaderSchemaV5 = new mongoose.Schema({
+  segment: String,
   id: String,
+  hl7version: String,
+
   setIdPatientId: String,
   patientIdExternalId: String,
   patientIdInternalId: String,
@@ -35,8 +39,7 @@ const HL7DecodedMessageHeaderSchema = new mongoose.Schema({
   patientDeathIndicator: String,
 }, { timestamps: true });
 
-export interface HL7DecodedMessageHeaderI {
-  id: string
+export interface HL7DecodedMessageHeaderV5I extends DecodedSegmentBase{
   setIdPatientId: string
   patientIdExternalId: string
   patientIdInternalId: string
@@ -68,4 +71,4 @@ export interface HL7DecodedMessageHeaderI {
   patientDeathIndicator: string
 }
 
-export const HL7DecodedMessageHeader = mongoose.model<HL7DecodedMessageHeaderDocument>("HL7DecodedMessageHeader", HL7DecodedMessageHeaderSchema);
+export const HL7DecodedMessageHeaderV5 = mongoose.model<HL7DecodedMessageHeaderDocument>("HL7DecodedMessageHeader", HL7DecodedMessageHeaderSchemaV5);

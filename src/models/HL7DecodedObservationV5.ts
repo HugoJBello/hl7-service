@@ -1,0 +1,54 @@
+import mongoose from "mongoose";
+import { DecodedSegmentBase, Hl7Segment } from "./Segment";
+
+export type HL7DecodedObservationDocument = mongoose.Document & HL7DecodedObservationV5I
+
+const HL7DecodedObservationSchemaV5 = new mongoose.Schema({
+  segment: String,
+  id: String,
+  hl7version: String,
+
+  setId: String,
+  valueType: String,
+  observationIdentifier: String,
+  observationSubId: String,
+  observationValue: Array(String),
+  units: String,
+  referenceRange: String,
+  abnormalFlags: Array(String),
+  probability: String,
+  natureAbnormalTest: Array(String),
+  observationResultStatus: String,
+  dataLastObsNormalValues: Date,
+  userDefinedAccessChecks: String,
+  dateOfObservation: Date,
+  producerId: String,
+  responsibleObserver: Array(String),
+  observationMethod: Array(String),
+  equipmentInstanceIdentifier: Array(String),
+  dateOfAnalysis: Date,
+}, { timestamps: true });
+
+export interface HL7DecodedObservationV5I extends DecodedSegmentBase {
+  setId: string
+  valueType: string,
+  observationIdentifier: string
+  observationSubId: string
+  observationValue: string[]
+  units: string
+  referenceRange: string
+  abnormalFlags: string[]
+  probability: string
+  natureAbnormalTest: string[]
+  observationResultStatus: string
+  dataLastObsNormalValues: Date
+  userDefinedAccessChecks: string
+  dateObservation: string
+  producerId: string
+  responsibleObserver: string[]
+  observationMethod: string[]
+  equipmentInstanceIdentifier: string[]
+  dateOfAnalysis: Date
+}
+
+export const HL7DecodedObservationV5 = mongoose.model<HL7DecodedObservationDocument>("HL7DecodedObservation", HL7DecodedObservationSchemaV5);

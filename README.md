@@ -8,15 +8,20 @@ https://github.com/amida-tech/hl7
 
 https://www.npmjs.com/package/hl7
 
-# hl7 test data
+# hl7 tcp connections
+
+https://stackoverflow.com/questions/35929761/transferring-data-through-tcp-sockets-using-nodejs
+
+
+## hl7 test data
 
 https://github.com/ruby-hl7/ruby-hl7/tree/master/test_data
 
-# hl7 generalities
+## hl7 generalities
 
 https://www.lyniate.com/knowledge-hub/hl7-separator-character-codes/
 https://www.lyniate.com/knowledge-hub/hl7-data-types/
-# hl7 and glucose
+## hl7 and glucose
 glucose must be an observation:
 
 https://hl7-definition.caristix.com/v2/HL7v2.5/Segments/OBX
