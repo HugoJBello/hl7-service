@@ -206,7 +206,7 @@
     "hl7OPT": "0",
     "hl7Repeatability": true,
     "hl7ComponentName": "Substance Manufacturer Name",
-    "dataType": "date",
+    "dataType": "string",
     "componentName": "substanceManufacturerName"
   },
   {

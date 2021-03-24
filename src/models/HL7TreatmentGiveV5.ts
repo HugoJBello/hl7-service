@@ -8,49 +8,72 @@ const HL7DecodedTreatmentGiveSchemaV5 = new mongoose.Schema({
   id: String,
   hl7version: String,
 
-  fieldSeparator: String,
-  encodingCharacters: String,
-  sendingApplication: String,
-  sendingFacility: String,
-  receivingApplication: String,
-  receivingFacility: String,
-  dateOfMessage: Date,
-  security: String,
-  messageType: String,
-  messageControlId: String,
-  processingId: String,
-  versionId: String,
-  sequenceNumber: String,
-  continuationPointer: String,
-  acceptAcknowledgmentType: String,
-  applicationAcknowledgmentType: String,
-  countryCode: String,
-  characterSet: String,
-  principalLanguageMessage: String,
-  alternateCharacterSetHandlingScheme: String
+  giveSubIdCounter: String,
+  dispenseSubIdCounter: String,
+  quantity: String,
+  giveCode: String,
+  giveAmountMinimum: String,
+  giveAmountMaximum: String,
+  giveUnits: String,
+  giveDosage: String,
+  substitutionStatus: String,
+  dispenseToLocation: String,
+  needsHumanReview: String,
+  treatmentSpecialAdminInstruction: String,
+  perGiveTimeUnit: String,
+  giveRateAmount: String,
+  giveRateUnits: String,
+  giveStrength: String,
+  giveStrengthUnits: String,
+  substanceLotNumber: Array(String),
+  substanceExpirationDate: Array(Date),
+  substanceManufacturerName: String,
+  giveDrugStrengthVolume: String,
+  giveDrugStrengthVolumeUnits: String,
+  giveBarcodeIdentifier: String,
+  pharmacyOrderType: String,
+  dispenseToPharmacy: String,
+  dispenseToPharmacyAddress: String,
+  deliverToPatientLocation: String,
+  deliverToAddress:String,
+  giveTagIdentifier: String,
+  dispenseAmount: String,
+  dispenseUnits: String,
 }, { timestamps: true });
 
 export interface HL7DecodedTreatmentGiveV5I extends DecodedSegmentBase{
-  fieldSeparator: string
-  encodingCharacters: string
-  sendingApplication: string
-  sendingFacility: string
-  receivingApplication: string
-  receivingFacility: string
-  dateOfMessage: Date
-  security: string
-  messageType: string
-  messageControlId: string
-  processingId: string
-  versionId: string
-  sequenceNumber: string
-  continuationPointer: string
-  acceptAcknowledgmentType: string
-  applicationAcknowledgmentType: string
-  countryCode: string
-  characterSet: string
-  principalLanguageMessage: string
-  alternateCharacterSetHandlingScheme: string
+  giveSubIdCounter: string
+  dispenseSubIdCounter: string
+  quantity: string
+  giveCode: string
+  giveAmountMinimum: string
+  giveAmountMaximum: string
+  giveUnits: string
+  giveDosage: string
+  substitutionStatus: string
+  dispenseToLocation: string
+  needsHumanReview: string
+  treatmentSpecialAdminInstruction: string
+  perGiveTimeUnit: string
+  giveRateAmount: string
+  giveRateUnits: string
+  giveStrength: string
+  giveStrengthUnits: string
+  substanceLotNumber: string[]
+  substanceExpirationDate: Date[]
+  substanceManufacturerName: string[]
+  giveDrugStrengthVolume: string
+  giveDrugStrengthVolumeUnits: string
+  giveBarcodeIdentifier: string
+  pharmacyOrderType: string
+  dispenseToPharmacy: string
+  dispenseToPharmacyAddress: string
+  deliverToPatientLocation: string
+  deliverToAddress: string
+  giveTagIdentifier: string
+  dispenseAmount: string
+  dispenseUnits: string
+
 }
 
 export const HL7DecodedTreatmentGiveV5 = mongoose.model<HL7DecodedTreatmentGiveDocument>("HL7DecodedTreatmentGive", HL7DecodedTreatmentGiveSchemaV5);

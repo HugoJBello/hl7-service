@@ -1,0 +1,252 @@
+[
+  {
+    "sequence": 1,
+    "hl7Len": 0,
+    "hl7DataType": "NM",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Give Sub-Id counter",
+    "dataType": "string",
+    "componentName": "giveSubIdCounter"
+  },
+  {
+    "sequence": 2,
+    "hl7Len": 20,
+    "hl7DataType": "NM",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Administration Sub-Id counter",
+    "dataType": "string",
+    "componentName": "administrationSubIdCounter"
+  },
+  {
+    "sequence": 3,
+    "hl7Len": 0,
+    "hl7DataType": "TS",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "dateStartAdministration",
+    "dataType": "date",
+    "componentName": "dateStartAdministration"
+  },
+  {
+    "sequence": 4,
+    "hl7Len": 0,
+    "hl7DataType": "TS",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "dateEndAdministration",
+    "dataType": "date",
+    "componentName": "dateEndAdministration"
+  },
+  {
+    "sequence": 5,
+    "hl7Len": 0,
+    "hl7DataType": "CE",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "administratedCode",
+    "dataType": "string",
+    "componentName": "administratedCode"
+  },
+  {
+    "sequence": 6,
+    "hl7Len": 0,
+    "hl7DataType": "NM",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "administratedAmount",
+    "dataType": "string",
+    "componentName": "administratedAmount"
+  },
+  {
+    "sequence": 7,
+    "hl7Len": 0,
+    "hl7DataType": "CE",
+    "hl7OPT": "R",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "administratedUnits",
+    "dataType": "string",
+    "componentName": "administratedUnits"
+  },
+  {
+    "sequence": 8,
+    "hl7Len": 0,
+    "hl7DataType": "CE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "administratedDosageForms",
+    "dataType": "string",
+    "componentName": "administratedDosageForm"
+  },
+  {
+    "sequence": 9,
+    "hl7Len": 0,
+    "hl7DataType": "CE",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "Administration Notes",
+    "dataType": "string",
+    "componentName": "administrationNotes"
+  },
+  {
+    "sequence": 10,
+    "hl7Len": 0,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "administeringProvider",
+    "dataType": "string",
+    "componentName": "administeringProvider"
+  },
+  {
+    "sequence": 11,
+    "hl7Len": 0,
+    "hl7DataType": "LA2",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "administeredAtLocation",
+    "dataType": "string",
+    "componentName": "administeredAtLocation"
+  },
+  {
+    "sequence": 12,
+    "hl7Len": 0,
+    "hl7DataType": "ST",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "administeredPer",
+    "dataType": "string",
+    "componentName": "administeredPer"
+  },
+  {
+    "sequence": 13,
+    "hl7Len": 0,
+    "hl7DataType": "MN",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "administeredStrength",
+    "dataType": "string",
+    "componentName": "administeredStrength"
+  },
+  {
+    "sequence": 14,
+    "hl7Len": 0,
+    "hl7DataType": "CE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "administeredStrengthUnits",
+    "dataType": "string",
+    "componentName": "administeredStrengthUnits"
+  },
+  {
+    "sequence": 15,
+    "hl7Len": 0,
+    "hl7DataType": "ST",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "substanceLotNumber",
+    "dataType": "string",
+    "componentName": "substanceLotNumber"
+  },
+  {
+    "sequence": 16,
+    "hl7Len": 0,
+    "hl7DataType": "TS",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "substanceExpirationDate",
+    "dataType": "string",
+    "componentName": "substanceExpirationDate"
+  },
+  {
+    "sequence": 17,
+    "hl7Len": 2,
+    "hl7DataType": "CE",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "substanceManufacturerName",
+    "dataType": "string",
+    "componentName": "substanceManufacturerName"
+  },
+  {
+    "sequence": 18,
+    "hl7Len": 0,
+    "hl7DataType": "CE",
+    "hl7OPT": "0",
+    "hl7Repeatability": true,
+    "hl7ComponentName": "substanceTreatmentRefusalReaction",
+    "dataType": "string",
+    "componentName": "substanceTreatmentRefusalReaction"
+  },
+  {
+    "sequence": 19,
+    "hl7Len": 0,
+    "hl7DataType": "CE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "indication",
+    "dataType": "string",
+    "componentName": "indication"
+  },
+  {
+    "sequence": 20,
+    "hl7Len": 0,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "completionStatus",
+    "dataType": "string",
+    "componentName": "completionStatus"
+  },
+  {
+    "sequence": 21,
+    "hl7Len": 0,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "actionCode",
+    "dataType": "string",
+    "componentName": "actionCode"
+  },
+  {
+    "sequence": 23,
+    "hl7Len": 0,
+    "hl7DataType": "TS",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "systemEntryDate",
+    "dataType": "date",
+    "componentName": "systemEntryDate"
+  },
+  {
+    "sequence": 24,
+    "hl7Len": 0,
+    "hl7DataType": "NM",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "adminsiteredDrugStrengthVolume",
+    "dataType": "string",
+    "componentName": "adminsiteredDrugStrengthVolume"
+  },
+  {
+    "sequence": 25,
+    "hl7Len": 0,
+    "hl7DataType": "CWE",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "adminsiteredDrugStrengthVolumeUnits",
+    "dataType": "string",
+    "componentName": "adminsiteredDrugStrengthVolumeUnits"
+  },
+  {
+    "sequence": 26,
+    "hl7Len": 0,
+    "hl7DataType": "ID",
+    "hl7OPT": "0",
+    "hl7Repeatability": false,
+    "hl7ComponentName": "Pharmacy Order Type",
+    "dataType": "string",
+    "componentName": "pharmacyOrderType"
+  }
+]
