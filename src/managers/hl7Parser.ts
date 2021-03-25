@@ -1,10 +1,10 @@
-import { SchemeField } from "../models/Schema";
+import { SchemaField } from "../models/Schema";
 
 const separator = "|";
 const arraySeparator = "^";
 
 export interface Hl7ParsedObject {
-  [key: string]: Object
+  [key: string]: any
 }
 
 export const parseHl7Date = (dateStr: string) => {
@@ -20,7 +20,7 @@ export const parseHl7Date = (dateStr: string) => {
     ));
 };
 
-export const parseStringSegmentUsingSchema = (hl7Item: string, schema: SchemeField[]): Object => {
+export const parseStringSegmentUsingSchema = (hl7Item: string, schema: SchemaField[]): any => {
   const result = {} as Hl7ParsedObject;
 
   const parts = hl7Item.split(separator);
@@ -61,5 +61,5 @@ export const parseStringSegmentUsingSchema = (hl7Item: string, schema: SchemeFie
     }
   }));
 
-  return result as Object;
+  return result as any;
 };

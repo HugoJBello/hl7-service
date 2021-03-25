@@ -8,7 +8,7 @@ const observationHl7StringExample = "OBX|3|CE|169999^.^L||SPRCS|||||N|F|||199807
 describe("Hl7 generic parser", () => {
     it("should return 200 OK", (done) => {
 
-      const parsedObs = hl7OBSXDecoder(observationHl7StringExample)
+      const parsedObs = hl7OBSXDecoder(observationHl7StringExample,"2.5")
       console.log(parsedObs)
       expect(parsedObs).toBeDefined()
       expect(parsedObs.dateObservation).toBeDefined()

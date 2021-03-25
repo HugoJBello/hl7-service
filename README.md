@@ -17,6 +17,8 @@ https://stackoverflow.com/questions/35929761/transferring-data-through-tcp-socke
 
 https://github.com/ruby-hl7/ruby-hl7/tree/master/test_data
 
+https://asiis.azdhs.gov/phchub/help/SampleHL7Msgs.htm
+
 ## hl7 generalities
 
 https://www.lyniate.com/knowledge-hub/hl7-separator-character-codes/

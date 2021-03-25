@@ -1,213 +1,196 @@
-[
-  {
-    "sequence": 1,
-    "hl7Len": 1,
-    "hl7DataType": "SI",
-    "hl7OPT": "R",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Set ID – Obx",
-
-    "dataType": "string",
-    "componentName": "setId"
-  },
-  {
-    "sequence": 2,
-    "hl7Len": 2,
-    "hl7DataType": "ID",
-    "hl7OPT": "R",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Value Type",
-
-    "dataType": "string",
-    "componentName": "valueType"
-  },
-  {
-    "sequence": 3,
-    "hl7Len": 590,
-    "hl7DataType": "CE",
-    "hl7OPT": "R",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Observation Identifier",
-
-    "dataType": "string",
-    "componentName": "observationIdentifier"
-  },
-  {
-    "sequence": 4,
-    "hl7Len": 20,
-    "hl7DataType": "ST",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Observation Sub-Id",
-
-    "dataType": "string",
-    "componentName": "observationSubId"
-  },
-  {
-    "sequence": 5,
-    "hl7Len": 65536,
-    "hl7DataType": "ST",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Observation Value",
-
-    "dataType": "string",
-    "componentName": "observationValue"
-  },
-  {
-    "sequence": 6,
-    "hl7Len": 60,
-    "hl7DataType": "CE",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Units",
-
-    "dataType": "string",
-    "componentName": "units"
-  },
-  {
-    "sequence": 7,
-    "hl7Len": 10,
-    "hl7DataType": "ST",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Reference Range",
-
-    "dataType": "string",
-    "componentName": "referenceRange"
-  },
-  {
-    "sequence": 8,
-    "hl7Len": 5,
-    "hl7DataType": "ID",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Abnormal Flags",
-
-    "dataType": "string",
-    "componentName": "abnormalFlags"
-  },
-  {
-    "sequence": 9,
-    "hl7Len": 5,
-    "hl7DataType": "NM",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Probability",
-
-    "dataType": "string",
-    "componentName": "probability"
-  },
-  {
-    "sequence": 10,
-    "hl7Len": 2,
-    "hl7DataType": "ID",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Nature of Abnormal Test",
-
-    "dataType": "string",
-    "componentName": "natureAbnormalTest"
-  },
-  {
-    "sequence": 11,
-    "hl7Len": 1,
-    "hl7DataType": "ID",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Observation Result Status",
-
-    "dataType": "string",
-    "componentName": "observationResultStatus"
-  },
-  {
-    "sequence": 12,
-    "hl7Len": 26,
-    "hl7DataType": "TS",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Date Last Obs Normal Values",
-
-    "dataType": "date",
-    "componentName": "dateLastObsNormalValues"
-  },
-  {
-    "sequence": 13,
-    "hl7Len": 20,
-    "hl7DataType": "ST",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "User Defined Access Checks",
-
-    "dataType": "string",
-    "componentName": "userDefinedAccessChecks"
-  },
-  {
-    "sequence": 14,
-    "hl7Len": 26,
-    "hl7DataType": "TS",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Date/Time of the Observation",
-
-    "dataType": "date",
-    "componentName": "dateObservation"
-  },
-  {
-    "sequence": 15,
-    "hl7Len": 60,
-    "hl7DataType": "CE",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Producer’s Id",
-
-    "dataType": "string",
-    "componentName": "producerId"
-  },
-  {
-    "sequence": 16,
-    "hl7Len": 80,
-    "hl7DataType": "XCN",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Responsible Observer",
-
-    "dataType": "string",
-    "componentName": "responsibleObserver"
-  },
-  {
-    "sequence": 17,
-    "hl7Len": 80,
-    "hl7DataType": "CE",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Observation Method",
-
-    "dataType": "string",
-    "componentName": "observationMethod"
-  }
-
-
-,
-  {
-    "sequence": 18,
-    "hl7Len": 0,
-    "hl7DataType": "EI",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Equipment Instance Identifier",
-    "dataType": "string",
-    "componentName": "equipmentInstanceIdentifier"
-  },
-  {
-    "sequence": 19,
-    "hl7Len": 0,
-    "hl7DataType": "DT",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Date/Time Of The Analysis",
-
-    "dataType": "date",
-    "componentName": "dateOfAnalysis"
-  }
-]
+{
+  "segmentName": "OBX",
+  "hl7Version": "2.5",
+  "fields": [
+    {
+      "sequence": 1,
+      "hl7Len": 1,
+      "hl7DataType": "SI",
+      "hl7OPT": "R",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Set ID – Obx",
+      "dataType": "string",
+      "componentName": "setId"
+    },
+    {
+      "sequence": 2,
+      "hl7Len": 2,
+      "hl7DataType": "ID",
+      "hl7OPT": "R",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Value Type",
+      "dataType": "string",
+      "componentName": "valueType"
+    },
+    {
+      "sequence": 3,
+      "hl7Len": 590,
+      "hl7DataType": "CE",
+      "hl7OPT": "R",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Observation Identifier",
+      "dataType": "string",
+      "componentName": "observationIdentifier"
+    },
+    {
+      "sequence": 4,
+      "hl7Len": 20,
+      "hl7DataType": "ST",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Observation Sub-Id",
+      "dataType": "string",
+      "componentName": "observationSubId"
+    },
+    {
+      "sequence": 5,
+      "hl7Len": 65536,
+      "hl7DataType": "ST",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Observation Value",
+      "dataType": "string",
+      "componentName": "observationValue"
+    },
+    {
+      "sequence": 6,
+      "hl7Len": 60,
+      "hl7DataType": "CE",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Units",
+      "dataType": "string",
+      "componentName": "units"
+    },
+    {
+      "sequence": 7,
+      "hl7Len": 10,
+      "hl7DataType": "ST",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Reference Range",
+      "dataType": "string",
+      "componentName": "referenceRange"
+    },
+    {
+      "sequence": 8,
+      "hl7Len": 5,
+      "hl7DataType": "ID",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Abnormal Flags",
+      "dataType": "string",
+      "componentName": "abnormalFlags"
+    },
+    {
+      "sequence": 9,
+      "hl7Len": 5,
+      "hl7DataType": "NM",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Probability",
+      "dataType": "string",
+      "componentName": "probability"
+    },
+    {
+      "sequence": 10,
+      "hl7Len": 2,
+      "hl7DataType": "ID",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Nature of Abnormal Test",
+      "dataType": "string",
+      "componentName": "natureAbnormalTest"
+    },
+    {
+      "sequence": 11,
+      "hl7Len": 1,
+      "hl7DataType": "ID",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Observation Result Status",
+      "dataType": "string",
+      "componentName": "observationResultStatus"
+    },
+    {
+      "sequence": 12,
+      "hl7Len": 26,
+      "hl7DataType": "TS",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Date Last Obs Normal Values",
+      "dataType": "date",
+      "componentName": "dateLastObsNormalValues"
+    },
+    {
+      "sequence": 13,
+      "hl7Len": 20,
+      "hl7DataType": "ST",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "User Defined Access Checks",
+      "dataType": "string",
+      "componentName": "userDefinedAccessChecks"
+    },
+    {
+      "sequence": 14,
+      "hl7Len": 26,
+      "hl7DataType": "TS",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Date/Time of the Observation",
+      "dataType": "date",
+      "componentName": "dateObservation"
+    },
+    {
+      "sequence": 15,
+      "hl7Len": 60,
+      "hl7DataType": "CE",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Producer’s Id",
+      "dataType": "string",
+      "componentName": "producerId"
+    },
+    {
+      "sequence": 16,
+      "hl7Len": 80,
+      "hl7DataType": "XCN",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Responsible Observer",
+      "dataType": "string",
+      "componentName": "responsibleObserver"
+    },
+    {
+      "sequence": 17,
+      "hl7Len": 80,
+      "hl7DataType": "CE",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Observation Method",
+      "dataType": "string",
+      "componentName": "observationMethod"
+    },
+    {
+      "sequence": 18,
+      "hl7Len": 0,
+      "hl7DataType": "EI",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Equipment Instance Identifier",
+      "dataType": "string",
+      "componentName": "equipmentInstanceIdentifier"
+    },
+    {
+      "sequence": 19,
+      "hl7Len": 0,
+      "hl7DataType": "DT",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Date/Time Of The Analysis",
+      "dataType": "date",
+      "componentName": "dateOfAnalysis"
+    }
+  ]
+}

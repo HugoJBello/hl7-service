@@ -1,332 +1,306 @@
-[
-  {
-    "sequence": 1,
-    "hl7Len": 4,
-    "hl7DataType": "SI",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Set ID – Patient ID",
-
-    "dataType": "string",
-    "componentName": "setIdPatientId"
-  },
-  {
-    "sequence": 2,
-    "hl7Len": 20,
-    "hl7DataType": "CX",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Patient ID (External ID)",
-
-    "dataType": "string",
-    "componentName": "patientIdExternalId"
-  },
-  {
-    "sequence": 3,
-    "hl7Len": 20,
-    "hl7DataType": "CX",
-    "hl7OPT": "R",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Patient ID (Internal ID)",
-
-    "dataType": "string",
-    "componentName": "patientIdInternalId"
-  },
-  {
-    "sequence": 4,
-    "hl7Len": 20,
-    "hl7DataType": "CX",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Alternate Patient ID – PID",
-
-    "dataType": "string",
-    "componentName": "alternatePatientId"
-  },
-  {
-    "sequence": 5,
-    "hl7Len": 48,
-    "hl7DataType": "XPN",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Patient Name",
-
-    "dataType": "string",
-    "componentName": "patientName"
-  },
-  {
-    "sequence": 6,
-    "hl7Len": 48,
-    "hl7DataType": "XPN",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Mother’s Maiden Name",
-
-    "dataType": "string",
-    "componentName": "motherMaidenName"
-  },
-  {
-    "sequence": 7,
-    "hl7Len": 26,
-    "hl7DataType": "TS",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Date/Time of Birth",
-
-    "dataType": "date",
-    "componentName": "dateOfBirth"
-  },
-  {
-    "sequence": 8,
-    "hl7Len": 1,
-    "hl7DataType": "IS",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Sex",
-
-    "dataType": "string",
-    "componentName": "sex"
-  },
-  {
-    "sequence": 9,
-    "hl7Len": 48,
-    "hl7DataType": "XPN",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Patient Alias",
-
-    "dataType": "string",
-    "componentName": "patientAlias"
-  },
-  {
-    "sequence": 10,
-    "hl7Len": 1,
-    "hl7DataType": "IS",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Race",
-
-    "dataType": "string",
-    "componentName": "race"
-  },
-  {
-    "sequence": 11,
-    "hl7Len": 106,
-    "hl7DataType": "XAD",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Patient Address",
-
-    "dataType": "string",
-    "componentName": "patientAddress"
-  },
-  {
-    "sequence": 12,
-    "hl7Len": 4,
-    "hl7DataType": "IS",
-    "hl7OPT": "B",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Country Code",
-
-    "dataType": "string",
-    "componentName": "countryCode"
-  },
-  {
-    "sequence": 13,
-    "hl7Len": 40,
-    "hl7DataType": "XTN",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Phone Number – Home",
-
-    "dataType": "string",
-    "componentName": "phoneNumberHome"
-  },
-  {
-    "sequence": 14,
-    "hl7Len": 40,
-    "hl7DataType": "XTS",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Phone Number – Business",
-
-    "dataType": "string",
-    "componentName": "phoneNumberBusiness"
-  },
-  {
-    "sequence": 15,
-    "hl7Len": 60,
-    "hl7DataType": "CE",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Primary Language",
-
-    "dataType": "string",
-    "componentName": "primaryLanguage"
-  },
-  {
-    "sequence": 16,
-    "hl7Len": 1,
-    "hl7DataType": "CE",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "marital Status",
-
-    "dataType": "string",
-    "componentName": "maritalStatus"
-  },
-  {
-    "sequence": 17,
-    "hl7Len": 2,
-    "hl7DataType": "IS",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Religion",
-
-    "dataType": "string",
-    "componentName": "religion"
-  },
-  {
-    "sequence": 18,
-    "hl7Len": 20,
-    "hl7DataType": "CX",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Patient Account Number",
-
-    "dataType": "string",
-    "componentName": "patientAccountNumber"
-  },
-  {
-    "sequence": 19,
-    "hl7Len": 16,
-    "hl7DataType": "ST",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "SSN Number – Patient",
-
-    "dataType": "string",
-    "componentName": "sSNNumberPatient"
-  },
-  {
-    "sequence": 20,
-    "hl7Len": 25,
-    "hl7DataType": "DLN",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Driver’s License Number - Patient",
-
-    "dataType": "string",
-    "componentName": "driverLicenseNumberPatient"
-  },
-  {
-    "sequence": 21,
-    "hl7Len": 20,
-    "hl7DataType": "CX",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Mother’s Identifier",
-
-    "dataType": "string",
-    "componentName": "motherIdentifier"
-  },
-  {
-    "sequence": 22,
-    "hl7Len": 3,
-    "hl7DataType": "CX",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Ethnic Group",
-
-    "dataType": "string",
-    "componentName": "ethnicGroup"
-  },
-  {
-    "sequence": 23,
-    "hl7Len": 60,
-    "hl7DataType": "ST",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Birth Place",
-
-    "dataType": "string",
-    "componentName": "birthPlace"
-  },
-  {
-    "sequence": 24,
-    "hl7Len": 2,
-    "hl7DataType": "ID",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Multiple Birth Indicator",
-
-    "dataType": "string",
-    "componentName": "multipleBirthIndicator"
-  },
-  {
-    "sequence": 25,
-    "hl7Len": 2,
-    "hl7DataType": "NM",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Birth Order",
-
-    "dataType": "string",
-    "componentName": "birthOrder"
-  },
-  {
-    "sequence": 26,
-    "hl7Len": 4,
-    "hl7DataType": "IS",
-    "hl7OPT": "0",
-    "hl7Repeatability": true,
-    "hl7ComponentName": "Citizenship",
-
-    "dataType": "string",
-    "componentName": "citizenship"
-  },
-  {
-    "sequence": 27,
-    "hl7Len": 60,
-    "hl7DataType": "CE",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Veterans Military Status",
-
-    "dataType": "string",
-    "componentName": "veteransMilitaryStatus"
-  },
-  {
-    "sequence": 28,
-    "hl7Len": 80,
-    "hl7DataType": "CE",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Nationality",
-
-    "dataType": "string",
-    "componentName": "mationality"
-  },
-  {
-    "sequence": 29,
-    "hl7Len": 26,
-    "hl7DataType": "TS",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Patient Death Date and Time",
-
-    "dataType": "date",
-    "componentName": "patientDeathDate"
-  },
-  {
-    "sequence": 30,
-    "hl7Len": 1,
-    "hl7DataType": "ID",
-    "hl7OPT": "0",
-    "hl7Repeatability": false,
-    "hl7ComponentName": "Patient Death Indicator",
-
-    "dataType": "string",
-    "componentName": "patientDeathIndicator"
-  }
-]
+{
+  "segmentName": "PID",
+  "hl7Version": "2.5",
+  "fields": [
+    {
+      "sequence": 1,
+      "hl7Len": 4,
+      "hl7DataType": "SI",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Set ID – Patient ID",
+      "dataType": "string",
+      "componentName": "setIdPatientId"
+    },
+    {
+      "sequence": 2,
+      "hl7Len": 20,
+      "hl7DataType": "CX",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Patient ID (External ID)",
+      "dataType": "string",
+      "componentName": "patientIdExternalId"
+    },
+    {
+      "sequence": 3,
+      "hl7Len": 20,
+      "hl7DataType": "CX",
+      "hl7OPT": "R",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Patient ID (Internal ID)",
+      "dataType": "string",
+      "componentName": "patientIdInternalId"
+    },
+    {
+      "sequence": 4,
+      "hl7Len": 20,
+      "hl7DataType": "CX",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Alternate Patient ID – PID",
+      "dataType": "string",
+      "componentName": "alternatePatientId"
+    },
+    {
+      "sequence": 5,
+      "hl7Len": 48,
+      "hl7DataType": "XPN",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Patient Name",
+      "dataType": "string",
+      "componentName": "patientName"
+    },
+    {
+      "sequence": 6,
+      "hl7Len": 48,
+      "hl7DataType": "XPN",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Mother’s Maiden Name",
+      "dataType": "string",
+      "componentName": "motherMaidenName"
+    },
+    {
+      "sequence": 7,
+      "hl7Len": 26,
+      "hl7DataType": "TS",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Date/Time of Birth",
+      "dataType": "date",
+      "componentName": "dateOfBirth"
+    },
+    {
+      "sequence": 8,
+      "hl7Len": 1,
+      "hl7DataType": "IS",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Sex",
+      "dataType": "string",
+      "componentName": "sex"
+    },
+    {
+      "sequence": 9,
+      "hl7Len": 48,
+      "hl7DataType": "XPN",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Patient Alias",
+      "dataType": "string",
+      "componentName": "patientAlias"
+    },
+    {
+      "sequence": 10,
+      "hl7Len": 1,
+      "hl7DataType": "IS",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Race",
+      "dataType": "string",
+      "componentName": "race"
+    },
+    {
+      "sequence": 11,
+      "hl7Len": 106,
+      "hl7DataType": "XAD",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Patient Address",
+      "dataType": "string",
+      "componentName": "patientAddress"
+    },
+    {
+      "sequence": 12,
+      "hl7Len": 4,
+      "hl7DataType": "IS",
+      "hl7OPT": "B",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Country Code",
+      "dataType": "string",
+      "componentName": "countryCode"
+    },
+    {
+      "sequence": 13,
+      "hl7Len": 40,
+      "hl7DataType": "XTN",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Phone Number – Home",
+      "dataType": "string",
+      "componentName": "phoneNumberHome"
+    },
+    {
+      "sequence": 14,
+      "hl7Len": 40,
+      "hl7DataType": "XTS",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Phone Number – Business",
+      "dataType": "string",
+      "componentName": "phoneNumberBusiness"
+    },
+    {
+      "sequence": 15,
+      "hl7Len": 60,
+      "hl7DataType": "CE",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Primary Language",
+      "dataType": "string",
+      "componentName": "primaryLanguage"
+    },
+    {
+      "sequence": 16,
+      "hl7Len": 1,
+      "hl7DataType": "CE",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "marital Status",
+      "dataType": "string",
+      "componentName": "maritalStatus"
+    },
+    {
+      "sequence": 17,
+      "hl7Len": 2,
+      "hl7DataType": "IS",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Religion",
+      "dataType": "string",
+      "componentName": "religion"
+    },
+    {
+      "sequence": 18,
+      "hl7Len": 20,
+      "hl7DataType": "CX",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Patient Account Number",
+      "dataType": "string",
+      "componentName": "patientAccountNumber"
+    },
+    {
+      "sequence": 19,
+      "hl7Len": 16,
+      "hl7DataType": "ST",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "SSN Number – Patient",
+      "dataType": "string",
+      "componentName": "sSNNumberPatient"
+    },
+    {
+      "sequence": 20,
+      "hl7Len": 25,
+      "hl7DataType": "DLN",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Driver’s License Number - Patient",
+      "dataType": "string",
+      "componentName": "driverLicenseNumberPatient"
+    },
+    {
+      "sequence": 21,
+      "hl7Len": 20,
+      "hl7DataType": "CX",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Mother’s Identifier",
+      "dataType": "string",
+      "componentName": "motherIdentifier"
+    },
+    {
+      "sequence": 22,
+      "hl7Len": 3,
+      "hl7DataType": "CX",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Ethnic Group",
+      "dataType": "string",
+      "componentName": "ethnicGroup"
+    },
+    {
+      "sequence": 23,
+      "hl7Len": 60,
+      "hl7DataType": "ST",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Birth Place",
+      "dataType": "string",
+      "componentName": "birthPlace"
+    },
+    {
+      "sequence": 24,
+      "hl7Len": 2,
+      "hl7DataType": "ID",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Multiple Birth Indicator",
+      "dataType": "string",
+      "componentName": "multipleBirthIndicator"
+    },
+    {
+      "sequence": 25,
+      "hl7Len": 2,
+      "hl7DataType": "NM",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Birth Order",
+      "dataType": "string",
+      "componentName": "birthOrder"
+    },
+    {
+      "sequence": 26,
+      "hl7Len": 4,
+      "hl7DataType": "IS",
+      "hl7OPT": "0",
+      "hl7Repeatability": true,
+      "hl7ComponentName": "Citizenship",
+      "dataType": "string",
+      "componentName": "citizenship"
+    },
+    {
+      "sequence": 27,
+      "hl7Len": 60,
+      "hl7DataType": "CE",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Veterans Military Status",
+      "dataType": "string",
+      "componentName": "veteransMilitaryStatus"
+    },
+    {
+      "sequence": 28,
+      "hl7Len": 80,
+      "hl7DataType": "CE",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Nationality",
+      "dataType": "string",
+      "componentName": "mationality"
+    },
+    {
+      "sequence": 29,
+      "hl7Len": 26,
+      "hl7DataType": "TS",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Patient Death Date and Time",
+      "dataType": "date",
+      "componentName": "patientDeathDate"
+    },
+    {
+      "sequence": 30,
+      "hl7Len": 1,
+      "hl7DataType": "ID",
+      "hl7OPT": "0",
+      "hl7Repeatability": false,
+      "hl7ComponentName": "Patient Death Indicator",
+      "dataType": "string",
+      "componentName": "patientDeathIndicator"
+    }
+  ]
+}

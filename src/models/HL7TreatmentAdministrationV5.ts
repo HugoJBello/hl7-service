@@ -25,7 +25,7 @@ const HL7DecodedTreatmentAdministrationSchemaV5 = new mongoose.Schema({
   substanceExpirationDate: Array(Date),
   substanceManufacturerName: Array(String),
   substanceTreatmentRefusalReaction: Array(String),
-  indication: String,
+  indication: Array(String),
   completionStatus: String,
   actionCode: String,
   systemEntryDate: Date,
@@ -52,7 +52,7 @@ export interface HL7DecodedTreatmentAdministrationV5I extends DecodedSegmentBase
   substanceExpirationDate: Date[]
   substanceManufacturerName: string[]
   substanceTreatmentRefusalReaction: string[]
-  indication: string
+  indication: string[]
   completionStatus: string
   actionCode: string
   systemEntryDate: Date
