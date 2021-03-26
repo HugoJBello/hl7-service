@@ -17,9 +17,9 @@ describe("Hl7 send message handler", () => {
   it("hl7 send message handler", () => {
     const result = incomingMessageHandler(example);
 
-    const encoded = sendMessageHandler(result)
-    console.log(example)
-    console.log(encoded)
+    const encoded = sendMessageHandler(result);
+    console.log(example);
+    console.log(encoded);
 
   });
 });
