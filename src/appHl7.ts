@@ -1,4 +1,4 @@
-import { messageHandler } from "./tcpHl7Handlers/hl7MessageHandler";
+import { incomingMessageHandler } from "./tcpHl7Handlers/hl7IncomingMessageHandler";
 
 require("dotenv").config();
 const hl7 = require("simple-hl7");
@@ -11,7 +11,7 @@ appHl7.use(function(req: any, res: any, next:Function) {
   const message:string = req.msg.log()
   console.log(message)
   try {
-    const parsed = messageHandler(message)
+    const parsed = incomingMessageHandler(message)
     console.log("----", parsed)
   } catch (e) {
     console.log(e)

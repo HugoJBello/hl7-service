@@ -1,10 +1,10 @@
 import { Schema, SchemaField } from "../models/Schema";
-import { isArray } from "util";
+import { SegmentExtended } from "../models/Hl7GeneratedModels/Segment";
 
 const separator = "|";
 const arraySeparator = "^";
 
-export const parseToHl7Date = (date: Date) => {
+export const parseToHl7Date = (date: Date): string => {
   const y = date.getFullYear().toString();
   let m = (date.getMonth() + 1).toString();
   let d = date.getDate().toString();
@@ -20,7 +20,7 @@ export const parseToHl7Date = (date: Date) => {
   return yyyymmdd;
 };
 
-export const parseDecodedSegmentUsingSchema = (hl7Item: any, schema: Schema): any => {
+export const encodeSegmentUsingSchema = (hl7Item: SegmentExtended, schema: Schema): string => {
   let result = schema.segmentName;
 
   schema.fields.forEach(((field, index) => {
@@ -28,10 +28,10 @@ export const parseDecodedSegmentUsingSchema = (hl7Item: any, schema: Schema): an
     result = result + separator + value;
   }));
 
-  return result as any;
+  return result as string;
 };
 
-const getValue = (hl7Item: any, field: SchemaField) => {
+const getValue = (hl7Item: any, field: SchemaField): string => {
   const value = hl7Item[field.componentName];
 
   const isArray = Array.isArray(value);
@@ -40,9 +40,9 @@ const getValue = (hl7Item: any, field: SchemaField) => {
     return "";
   }
 
-  if (field.dataType === "date" && isDate && !isArray) {
+  if (field.dataType === "Date" && isDate && !isArray) {
     return parseToHl7Date(value);
-  } else if (field.dataType === "date") {
+  } else if (field.dataType === "Date") {
     return value.map((item: any) => parseToHl7Date(item)).join(arraySeparator);
   }
 

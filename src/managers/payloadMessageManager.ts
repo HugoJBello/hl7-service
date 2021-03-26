@@ -10,7 +10,7 @@ export interface MessageSegmentPart {
 
 const extractLine = (line: string): MessageSegmentPart => {
   if (!line.includes(separator)) {
-    throw new Error("incorrect format in line " + line);
+    throw new Error(`incorrect format in line ${  line}`);
   }
   const key = line.split(separator)[0] as Hl7Segment;
   const message = { hl7Key: key, hl7BodyPart: line } as MessageSegmentPart;

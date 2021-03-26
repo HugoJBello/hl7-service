@@ -1,6 +1,8 @@
-import { HL7ObservationSchemaV5 } from "../models/Schema";
+import { SchemaCompleteIndex } from "../models/Schema";
 import { parseStringSegmentUsingSchema } from "../managers/hl7Parser";
-import { HL7DecodedObservationV8I } from "../models/HL7DecodedObservationV8";
+import { Hl7Segment, Hl7Version } from "../models/Segment";
+import { HL7ObservationResultV5I } from "../models/Hl7GeneratedModels/HL7ObservationResultV5";
+import { HL7ObservationresultV8I } from "../models/Hl7GeneratedModels/HL7ObservationresultV8";
 
 const fs = require("fs");
 
@@ -12,8 +14,8 @@ const observationHl7StringExample = "OBX|3|CE|169999^.^L||SPRCS|||||N|F|||199807
 describe("Hl7 observation parser", () => {
   it("parse string using schema", (done) => {
 
-    const observationSchema = HL7ObservationSchemaV5;
-    const parsedObs = parseStringSegmentUsingSchema(observationHl7StringExample, observationSchema.fields) as HL7DecodedObservationV8I;
+    const schema = SchemaCompleteIndex[Hl7Version.v5][Hl7Segment.Observationresult];
+    const parsedObs = parseStringSegmentUsingSchema(observationHl7StringExample, schema.fields) as HL7ObservationResultV5I;
     console.log(parsedObs);
     expect(parsedObs).toBeDefined();
     expect(parsedObs.observationValue).toBeDefined();
@@ -22,10 +24,9 @@ describe("Hl7 observation parser", () => {
 
   it("parse fields using schema", (done) => {
 
-    const observationSchema = HL7ObservationSchemaV5;
+    const schema = SchemaCompleteIndex[Hl7Version.v8][Hl7Segment.Observationresult];
 
-
-    const parsedObs = parseStringSegmentUsingSchema(observationHl7StringExample, observationSchema.fields) as HL7DecodedObservationV8I;
+    const parsedObs = parseStringSegmentUsingSchema(observationHl7StringExample, schema.fields) as HL7ObservationresultV8I;
     console.log(parsedObs);
     expect(parsedObs).toBeDefined();
     expect(parsedObs.observationValue).toBeDefined();

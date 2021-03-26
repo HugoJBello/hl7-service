@@ -1,7 +1,7 @@
-import { HL7MessageHeaderSchemaV5, HL7ObservationSchemaV5 } from "../models/Schema";
+import { SchemaCompleteIndex } from "../models/Schema";
 import { parseStringSegmentUsingSchema } from "../managers/hl7Parser";
-import { HL7DecodedObservationV8I } from "../models/HL7DecodedObservationV8";
-import { HL7DecodedMessageHeaderV5I } from "../models/HL7DecodedMessageHeaderV5";
+import { Hl7Segment, Hl7Version } from "../models/Segment";
+import { HL7MessageHeaderV5I } from "../models/Hl7GeneratedModels/HL7MessageHeaderV5";
 
 const fs = require("fs");
 
@@ -12,14 +12,12 @@ const messageHeaderHl7StringExample = "MSH|^~\&|^^|MA0000^^|^^|GA0000^^|20111105
 
 describe("Hl7 message header parser", () => {
   it("parse fields using schema", (done) => {
+    const schema = SchemaCompleteIndex[Hl7Version.v5][Hl7Segment.MessageHeader];
 
-    const observationSchema = HL7MessageHeaderSchemaV5;
-
-
-    const parsedObs = parseStringSegmentUsingSchema(messageHeaderHl7StringExample, observationSchema.fields) as HL7DecodedMessageHeaderV5I;
+    const parsedObs = parseStringSegmentUsingSchema(messageHeaderHl7StringExample, schema.fields) as HL7MessageHeaderV5I;
     console.log(parsedObs);
     expect(parsedObs).toBeDefined();
-    expect(parsedObs.versionId).toBeDefined();
+    expect(parsedObs.fieldSeparator).toBeDefined();
     done();
   });
 });

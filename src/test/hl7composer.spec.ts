@@ -1,6 +1,7 @@
-import { hl7OBSXDecoder } from "../managers/hl7ObservationParser";
-import { parseDecodedSegmentUsingSchema } from "../managers/hl7Composer";
-import { HL7ObservationSchemaV5 } from "../models/Schema";
+import { encodeSegmentUsingSchema } from "../managers/hl7Composer";
+import { SchemaCompleteIndex } from "../models/Schema";
+import { Hl7Segment, Hl7Version } from "../models/Segment";
+import { hl7Decoder } from "../managers/hl7Parser";
 
 const observation = {
   setId: "3",
@@ -20,13 +21,14 @@ const observation = {
 
 const observationHl7StringExampleForParsing = "OBX|3|CE|169999^.^L||SPRCS|||||N|F|||19980728130600|BN";
 
-describe("Hl7 generic parser", () => {
+describe("Hl7 generic decoder", () => {
   it("should return 200 OK", (done) => {
 
-    const parsedObs = hl7OBSXDecoder(observationHl7StringExampleForParsing, "2.5");
+    const parsedObs = hl7Decoder(observationHl7StringExampleForParsing, Hl7Version.v5,Hl7Segment.Observationresult );
     console.log(parsedObs);
 
-    const converted = parseDecodedSegmentUsingSchema(parsedObs, HL7ObservationSchemaV5);
+    const schema = SchemaCompleteIndex[Hl7Version.v5][Hl7Segment.Observationresult];
+    const converted = encodeSegmentUsingSchema(parsedObs, schema);
 
     console.log(observationHl7StringExampleForParsing);
     console.log(converted);

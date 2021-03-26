@@ -1,4 +1,6 @@
-import { SchemaField } from "../models/Schema";
+import { SchemaCompleteIndex, SchemaField } from "../models/Schema";
+import { Hl7Segment, Hl7Version } from "../models/Segment";
+import { SegmentExtended } from "../models/Hl7GeneratedModels/Segment";
 
 const separator = "|";
 const arraySeparator = "^";
@@ -20,7 +22,17 @@ export const parseHl7Date = (dateStr: string) => {
     ));
 };
 
-export const parseStringSegmentUsingSchema = (hl7Item: string, schema: SchemaField[]): any => {
+export const parseType = (value: any, field: SchemaField): string | Date | number => {
+  let result = value as string | Date | number;
+  if (field.dataType == "Date") {
+    result = parseHl7Date(value);
+  } else if (field.dataType == "number") {
+    result = parseFloat(value);
+  }
+  return result;
+};
+
+export const parseStringSegmentUsingSchema = (hl7Item: string, schema: SchemaField[]): SegmentExtended => {
   const result = {} as Hl7ParsedObject;
 
   const parts = hl7Item.split(separator);
@@ -42,24 +54,26 @@ export const parseStringSegmentUsingSchema = (hl7Item: string, schema: SchemaFie
       let value;
       if (currentPart.includes(arraySeparator)) {
         value = currentPart.split(arraySeparator);
-        if (field.dataType == "date") {
-          value = value.map(val => parseHl7Date(val));
-        }
+        value = value.map(val => parseType(val, field));
       } else {
         value = currentPart;
-        if (field.dataType == "date") {
-          value = parseHl7Date(value);
-        }
+        value = parseType(value, field);
       }
       result[name] = value;
     } else {
       let value = currentPart as any;
-      if (field.dataType == "date") {
-        value = parseHl7Date(value);
-      }
+      value = parseType(value, field);
       result[name] = value;
     }
   }));
 
-  return result as any;
+  return result as SegmentExtended;
+};
+
+export const hl7Decoder = (bsc: string, hl7version: Hl7Version, segment: Hl7Segment): SegmentExtended => {
+  const schema = SchemaCompleteIndex[hl7version][segment];
+  const result = parseStringSegmentUsingSchema(bsc, schema.fields) as SegmentExtended;
+  result.hl7Segment = segment;
+  result.hl7Version = hl7version;
+  return result as SegmentExtended;
 };

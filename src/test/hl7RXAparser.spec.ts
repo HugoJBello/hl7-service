@@ -1,7 +1,7 @@
-import { HL7ObservationSchemaV5, HL7TreatmentAdministrationSchemaV5 } from "../models/Schema";
+import { SchemaCompleteIndex } from "../models/Schema";
 import { parseStringSegmentUsingSchema } from "../managers/hl7Parser";
-import { HL7DecodedObservationV8I } from "../models/HL7DecodedObservationV8";
-import { HL7DecodedTreatmentAdministrationV5I } from "../models/HL7TreatmentAdministrationV5";
+import { Hl7Segment, Hl7Version } from "../models/Segment";
+import { HL7PharmacyTreatmentAdministrationV5I } from "../models/Hl7GeneratedModels/HL7PharmacyTreatmentAdministrationV5";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require("fs");
@@ -15,13 +15,13 @@ describe("Hl7 treatment admin parser", () => {
 
   it("parse fields using schema", (done) => {
 
-    const treatmentAdminSchema = HL7TreatmentAdministrationSchemaV5;
+    const schema = SchemaCompleteIndex[Hl7Version.v5][Hl7Segment.PharmacytreatmentAdministration];
 
 
-    const parsedObs = parseStringSegmentUsingSchema(treatmentHl7StringExample, treatmentAdminSchema.fields) as HL7DecodedTreatmentAdministrationV5I;
+    const parsedObs = parseStringSegmentUsingSchema(treatmentHl7StringExample, schema.fields) as HL7PharmacyTreatmentAdministrationV5I;
     console.log(parsedObs);
     expect(parsedObs).toBeDefined();
-    expect(parsedObs.administrationSubIdCounter).toBeDefined();
+    expect(parsedObs.administrationSubIDCounter).toBeDefined();
     done();
   });
 });
