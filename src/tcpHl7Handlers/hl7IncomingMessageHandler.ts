@@ -3,10 +3,12 @@ import { Hl7Segment, Hl7Version } from "../models/Segment";
 import { hl7Decoder } from "../managers/hl7Parser";
 import { Hl7MessageType } from "../models/HL7Message";
 import { SegmentExtended } from "../models/Hl7GeneratedModels/Segment";
-import { ADTA31MessageI } from "../models/ADTA31Message";
+import { ADTA31Message, ADTA31MessageI } from "../models/ADTA31Message";
+import { ADTA40Message } from "../models/ADTA40Message";
 import { ADTA40MessageI } from "../models/ADTA40Message";
-import { OMGO19MessageI } from "../models/OMG019Message";
-import { ORUR01MessageI } from "../models/ORUR01Message";
+import { OMG019Message, OMGO19MessageI } from "../models/OMG019Message";
+import { ORUR01Message, ORUR01MessageI } from "../models/ORUR01Message";
+import { GenericMessage } from "../models/GenericMessage";
 import { GenericMessageI } from "../models/GenericMessage";
 import {
   composeAdtA31,
@@ -15,6 +17,7 @@ import {
   composeOmgO19,
   composeORUR01,
 } from "../managers/incomingMessageComposers";
+import { v4 as uuidv4 } from "uuid";
 
 export const incomingMessageHandler = (hl7MessageString: string) => {
   const lines = separateSegmentPart(hl7MessageString);
@@ -49,18 +52,33 @@ export const decodeGenericMessage = (lines: MessageSegmentPart[], hl7Version: Hl
   return decodedMessage;
 };
 
-export const composeDecodedMessage = (decodedMessage: any[], messageType: Hl7MessageType): ADTA31MessageI | ADTA40MessageI | OMGO19MessageI | ORUR01MessageI | GenericMessageI => {
+export const composeDecodedMessage = async (decodedMessage: any[], messageType: Hl7MessageType): Promise<ADTA31MessageI | ADTA40MessageI | OMGO19MessageI | ORUR01MessageI | GenericMessageI> => {
+  const id = uuidv4();
   switch (messageType) {
     case Hl7MessageType.ADT_A31:
-      return composeAdtA31(decodedMessage);
+      const adta31 = composeAdtA31(decodedMessage);
+      adta31.id = id;
+      const docAdta31 = new ADTA31Message(adta31);
+      await docAdta31.save();
+      return adta31;
     case Hl7MessageType.ADT_A40:
-      return composeAdtA40(decodedMessage);
+      const adta40 = composeAdtA40(decodedMessage);
+      adta40.id = id;
+      const docAdtA40 = new ADTA40Message(adta40);
+      await docAdtA40.save();
+      return adta40;
     case Hl7MessageType.OMG_019:
-      return composeOmgO19(decodedMessage);
+      const omg = composeOmgO19(decodedMessage);
+      omg.id = id;
+      const docOmg = new OMG019Message(omg);
+      await docOmg.save();
+      return omg;
     case Hl7MessageType.ORU_R01:
-      return composeORUR01(decodedMessage);
-    case Hl7MessageType.OTHER:
-      return composeGenericUnknownMessage(decodedMessage);
+      const oru = composeORUR01(decodedMessage);
+      oru.id = id;
+      const docOru = new ORUR01Message(oru);
+      await docOru.save();
+      return oru;
     default:
       return composeGenericUnknownMessage(decodedMessage);
   }
