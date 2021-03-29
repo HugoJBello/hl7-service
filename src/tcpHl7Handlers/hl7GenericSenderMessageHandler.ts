@@ -6,7 +6,7 @@ import { encodeSegmentUsingSchema } from "../managers/hl7Composer";
 
 export type SegmentExtended = any & Segment;
 
-export const sendMessageHandler = (segments: SegmentExtended[]) => {
+export const composeGenericMessageHandler = (segments: SegmentExtended[]) => {
   let message = "";
   for (const segmentPart of segments) {
     const version = segmentPart.hl7Version;
@@ -17,3 +17,4 @@ export const sendMessageHandler = (segments: SegmentExtended[]) => {
   }
   return message;
 };
+

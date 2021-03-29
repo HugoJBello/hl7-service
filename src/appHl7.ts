@@ -1,26 +1,29 @@
 import { incomingMessageHandler } from "./tcpHl7Handlers/hl7IncomingMessageHandler";
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 require("dotenv").config();
 const hl7 = require("simple-hl7");
 
 export const appHl7 = hl7.tcp();
 
-appHl7.use(function(req: any, res: any, next:Function) {
+// eslint-disable-next-line @typescript-eslint/ban-types
+appHl7.use(function(req: any, res: any, next: Function) {
   //req.msg is the HL7 message
-  console.log("******message received*****");
-  const message:string = req.msg.log()
-  console.log(message)
+  console.log("Message received");
+  const message: string = req.msg.log();
+  console.log(message);
   try {
-    const parsed = incomingMessageHandler(message)
-    console.log("----", parsed)
+    const parsed = incomingMessageHandler(message);
+    console.log("----", parsed);
   } catch (e) {
-    console.log(e)
+    console.log(e);
   }
 
   next();
 });
 
-appHl7.use(function(req: any, res: any, next:Function) {
+// eslint-disable-next-line @typescript-eslint/ban-types
+appHl7.use(function(req: any, res: any, next: Function) {
   //res.ack is the ACK
   //acks are created automatically
 
@@ -29,7 +32,8 @@ appHl7.use(function(req: any, res: any, next:Function) {
   res.end();
 });
 
-appHl7.use(function(err:any, req: any, res: any, next:Function) {
+// eslint-disable-next-line @typescript-eslint/ban-types
+appHl7.use(function(err: any, req: any, res: any, next: Function) {
   //error handler
   //standard error middleware would be
   console.log("******ERROR*****");
