@@ -45,6 +45,10 @@ export const parseStringSegmentUsingSchema = (hl7Item: string, schema: SchemaFie
     //throw new Error("wrong input, incorrect schema");
   }
 
+  if (hl7Item.includes(Hl7Segment.MessageHeader + separator)) {
+    schema.shift();
+  }
+
   schema.forEach(((field, index) => {
     const currentPart = parts[index + 1];
     if (!currentPart || currentPart == "") return;

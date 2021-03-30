@@ -2,11 +2,11 @@ import { SchemaCompleteIndex } from "../models/Schema";
 
 import Segment from "../models/Hl7GeneratedModels/Segment";
 import { Hl7Segment, Hl7Version } from "../models/Segment";
-import { encodeSegmentUsingSchema } from "../managers/hl7Composer";
+import { encodeSegmentUsingSchema } from "./hl7Encoder";
 
 export type SegmentExtended = any & Segment;
 
-export const composeGenericMessageHandler = (segments: SegmentExtended[]) => {
+export const composeGenericMessage = (segments: SegmentExtended[]) => {
   let message = "";
   for (const segmentPart of segments) {
     const version = segmentPart.hl7Version;

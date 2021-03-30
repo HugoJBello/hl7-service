@@ -6,6 +6,7 @@ export interface HL7Message {
   id: string
   hl7Version: Hl7Version
   hl7MessageType: Hl7MessageType
+  status: Status
 }
 
 export const ADT_A31_SEGMENTS = ["MSH", "EVN", "PID", "PD1", "ROL", "PV1", "GT1"];
@@ -20,4 +21,9 @@ export enum Hl7MessageType {
   OMG_019 = "OMG_019",
   ORU_R01 = "ORU_R01",
   OTHER = "OTHER"
+}
+
+export enum Status {
+  SENT = "SENT",
+  CONFIRMED = "CONFIRMED",
 }

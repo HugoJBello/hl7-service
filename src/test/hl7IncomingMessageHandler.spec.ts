@@ -3,6 +3,7 @@ import { classifyMessage, separateSegmentPart } from "../managers/payloadMessage
 import { HL7ObservationResultV5I } from "../models/Hl7GeneratedModels/HL7ObservationResultV5";
 import { HL7PatientIdentificationV6I } from "../models/Hl7GeneratedModels/HL7PatientIdentificationV6";
 import { Hl7MessageType } from "../models/HL7Message";
+import mongoose from "mongoose";
 
 //const example = "MSH|^~&|LCS|LCA|LIS|TEST9999|199807311532||ORU^R01|3630|P|2.2\n" +
 //  "OBX|1|CWE|625-4^Bacteria identified in Stool by Culture^LN^^^^2.33^^result1|1|27268008^Salmonella^SCT^^^^20090731^^Salmonella species|||A^A^HL70078^^^^2.5|||P|||20120301|||^^^^^^^^Bacterial Culture||201203140957||||State Hygienic Laboratory^L^^^^IA Public Health Lab&2.16.840.1.114222.4.1.10411&ISO^FI^^^16D0648109|State Hygienic Laboratory^UIResearch Park -Coralville^Iowa City^IA^52242-5002^USA^B^^19103|^Atchison^Christopher^^^^^^^L";
@@ -30,6 +31,14 @@ const exampleADTA31 = "MSH|^~\\&|IMDH|034280100^FJ|QUIRONSALUD|034280100|2020052
   "PV1|1|H\n" +
   "GT1|1||||||||||||||||||||^^1011^^^^^^^1141";
 
+jest.setTimeout(100000)
+
+beforeAll(()=> {
+  require('dotenv').config();
+  mongoose.connect(process.env["MONGODB_URL"], {useNewUrlParser: true, useUnifiedTopology: true});
+
+})
+
 describe("Hl7 message handler", () => {
   it("hl7 version should be detectedr", () => {
     const lines = separateSegmentPart(exampleOMG);
@@ -39,8 +48,8 @@ describe("Hl7 message handler", () => {
 
   });
 
-  it("hl7 message handler", () => {
-    const result = incomingMessageHandler(exampleOMG);
+  it("hl7 message handler", async () => {
+    const result = await incomingMessageHandler(exampleOMG);
     console.log(result);
     expect(result.hl7MessageType).toBe(Hl7MessageType.OMG_019);
     expect(result.messageHeader).toBeDefined();

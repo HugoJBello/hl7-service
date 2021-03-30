@@ -1,12 +1,16 @@
-import { encodeSegmentUsingSchema } from "../managers/hl7Composer";
+import { encodeSegmentUsingSchema } from "../managers/hl7Encoder";
 import { SchemaCompleteIndex } from "../models/Schema";
 import { Hl7Segment, Hl7Version } from "../models/Segment";
 import { hl7Decoder } from "../managers/hl7Parser";
 import { incomingMessageHandler } from "../tcpHl7Handlers/hl7IncomingMessageHandler";
-import { composeORUR01MessageHandler } from "../tcpHl7Handlers/hl7ORUR01SenderMessageHandler";
+import { composeORUR01 } from "../managers/hl7ORUR01Composer";
 import { ORUR01MessageI } from "../models/ORUR01Message";
-import { composeOMG019MessageHandler } from "../tcpHl7Handlers/hl7OMG019SenderMessageHandler";
+import { composeOMG019 } from "../managers/hl7OMG019Composer";
 import { OMGO19MessageI } from "../models/OMG019Message";
+import mongoose from "mongoose";
+import { composeAdtA31 } from "../managers/incomingMessageComposers";
+import { ADTA31MessageI } from "../models/ADTA31Message";
+import { composeADTA31 } from "../managers/hl7ADTA31Composer";
 
 const observation = {
   setId: "3",
@@ -20,6 +24,12 @@ const observation = {
   hl7Segment: "OBX",
   hl7version: "2.5",
 };
+
+beforeAll(() => {
+  require("dotenv").config();
+  mongoose.connect(process.env["MONGODB_URL"], { useNewUrlParser: true, useUnifiedTopology: true });
+
+});
 
 //const observationHl7StringExample = "OBX||TX|FIND^FINDINGS^L|3|This is a test result to generate multiple obr's to check the cost"
 //const observationHl7StringExample = "OBX|1|CWE|625-4^Bacteria identified in Stool by Culture^LN^^^^2.33^^result1|1|27268008^Salmonella^SCT^^^^20090731^^Salmonella species|||A^A^HL70078^^^^2.5|||P|||20120301|||^^^^^^^^Bacterial Culture||201203140957||||State Hygienic Laboratory^L^^^^IA Public Health Lab&2.16.840.1.114222.4.1.10411&ISO^FI^^^16D0648109|State Hygienic Laboratory^UIResearch Park -Coralville^Iowa City^IA^52242-5002^USA^B^^19103|^Atchison^Christopher^^^^^^^L"
@@ -51,19 +61,18 @@ const exampleORU = "MSH|^~\\&|INSULCLOCK|034080400|HG|034080400|20200521134200||
 
 
 describe("Hl7 generic oru composer", () => {
-  it("should return 200 OK", (done) => {
+  it("should return 200 OK", async (done) => {
 
-    const result = incomingMessageHandler(exampleORU);
+    const result = await incomingMessageHandler(exampleORU);
     console.log(result);
 
-    const encoded = composeORUR01MessageHandler(result as ORUR01MessageI);
+    const encoded = composeORUR01(result as ORUR01MessageI);
     console.log(exampleORU);
     console.log(encoded);
     expect(encoded).toBeDefined();
     done();
   });
 });
-
 
 
 const exampleOMG = "MSH|^~\\&|QUIRONSALUD|034280100|MEDICONNECT|034280100|20200521121700||OMG^O19^OMG_O19|20200521121700.236|P|2.5|1||AL|AL||ASCII|||\n" +
@@ -74,14 +83,36 @@ const exampleOMG = "MSH|^~\\&|QUIRONSALUD|034280100|MEDICONNECT|034280100|202005
   "OBR|01|||CE11359^Descarga datos Holter Subcutaneo^CIE-10||||||||||||||||10430";
 
 
-
 describe("Hl7 generic omg composer", () => {
-  it("should return 200 OK", (done) => {
+  it("should return 200 OK", async (done) => {
 
-    const result = incomingMessageHandler(exampleOMG);
+    const result = await incomingMessageHandler(exampleOMG);
     console.log(result);
 
-    const encoded = composeOMG019MessageHandler(result as OMGO19MessageI);
+    const encoded = composeOMG019(result as OMGO19MessageI);
+    console.log(exampleOMG);
+    console.log(encoded);
+    expect(encoded).toBeDefined();
+    done();
+  });
+});
+
+
+const exampleADTA31 = "MSH|^~\\&|IMDH|034280100^FJ|QUIRONSALUD|034280100|20200522141811||ADT^A31^ADT_A05|20052214051160855200|T|2.5|||AL|NE\n" +
+  "EVN||20200522141811||||20200522141811\n" +
+  "PID|1||900210^^^^PI~X4985703Q^^^^NNESP~281200767986^^^SS^HC~ZCXX740453380018^^^SS^CIP~%B803416\\S\\ZCXX740453380018\\S\\1105601552\\S\\ZUCCHI VALENTINA \\S\\010002011\\R\\8034161105601552=001112000000\\R\\^^^^CIP~1105601552^^^CAM^JHN~BBBBBBBBBX844306^^^MS^NI~ZCXX197404530^^^^MR||ZU^VALENTINA||19740413000000|F|||CALLE&CALLE DEL C 16 ENTREP DCHA&16^ENTREP DCHA^280796^28^28015^724^H||686300634^PRN^PH~686300634^ORN^PH~679215660^PRN^CP~miguel.martinez@gfi.world^NET^Internet\n" +
+  "PD1|||16070310^^^^^^^28421|||||||||N\n" +
+  "ROL||UC|MAP|1607030106G\n" +
+  "PV1|1|H\n" +
+  "GT1|1||||||||||||||||||||^^1011^^^^^^^1141"
+
+describe("Hl7 generic adta31 composer", () => {
+  it("should return 200 OK", async (done) => {
+
+    const result = await incomingMessageHandler(exampleADTA31);
+    console.log(result);
+
+    const encoded = composeADTA31(result as ADTA31MessageI);
     console.log(exampleOMG);
     console.log(encoded);
     expect(encoded).toBeDefined();

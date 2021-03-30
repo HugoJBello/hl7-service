@@ -1,5 +1,6 @@
 import { Schema, SchemaField } from "../models/Schema";
 import { SegmentExtended } from "../models/Hl7GeneratedModels/Segment";
+import { Hl7Segment } from "../models/Segment";
 
 const separator = "|";
 const arraySeparator = "^";
@@ -21,11 +22,17 @@ export const parseToHl7Date = (date: Date): string => {
 };
 
 export const encodeSegmentUsingSchema = (hl7Item: SegmentExtended, schema: Schema): string => {
-  let result = schema.segmentName;
+  const segmentName = schema.segmentName;
+
+  let result = segmentName;
 
   schema.fields.forEach(((field, index) => {
-    const value = getValue(hl7Item, field);
-    result = result + separator + value;
+    try {
+      const value = getValue(hl7Item, field);
+      result = result + separator + value;
+    } catch (e) {
+    }
+
   }));
 
   return result as string;

@@ -1,6 +1,8 @@
 import { extracHl7Version, incomingMessageHandler } from "../tcpHl7Handlers/hl7IncomingMessageHandler";
 import { separateSegmentPart } from "../managers/payloadMessageManager";
-import { sendGenericMessageHandler } from "../tcpHl7Handlers/hl7OMG019SenderMessageHandler";
+import { composeOMG019 } from "../managers/hl7OMG019Composer";
+import mongoose from "mongoose";
+import { OMGO19MessageI } from "../models/OMG019Message";
 
 //const example = "MSH|^~&|LCS|LCA|LIS|TEST9999|199807311532||ORU^R01|3630|P|2.2\n" +
 //  "OBX|1|CWE|625-4^Bacteria identified in Stool by Culture^LN^^^^2.33^^result1|1|27268008^Salmonella^SCT^^^^20090731^^Salmonella species|||A^A^HL70078^^^^2.5|||P|||20120301|||^^^^^^^^Bacterial Culture||201203140957||||State Hygienic Laboratory^L^^^^IA Public Health Lab&2.16.840.1.114222.4.1.10411&ISO^FI^^^16D0648109|State Hygienic Laboratory^UIResearch Park -Coralville^Iowa City^IA^52242-5002^USA^B^^19103|^Atchison^Christopher^^^^^^^L";
@@ -12,12 +14,18 @@ const example = "MSH|^~\\&|QUIRONSALUD|034280100|MEDICONNECT|034280100|202005211
   "TQ1|||||||20200521121500||R^Normal^HL70485||||\n" +
   "OBR|01|||CE11359^Descarga datos Holter Subcutaneo^CIE-10||||||||||||||||10430";
 
+beforeAll(()=> {
+  require('dotenv').config();
+  mongoose.connect(process.env["MONGODB_URL"], {useNewUrlParser: true, useUnifiedTopology: true});
+
+})
+
 describe("Hl7 send message handler", () => {
 
-  it("hl7 send message handler", () => {
-    const result = incomingMessageHandler(example);
+  it("hl7 send message handler", async () => {
+    const result = await incomingMessageHandler(example);
 
-    const encoded = sendGenericMessageHandler(result);
+    const encoded = composeOMG019(result as OMGO19MessageI);
     console.log(example);
     console.log(encoded);
 
