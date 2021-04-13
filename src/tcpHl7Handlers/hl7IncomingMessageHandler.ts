@@ -28,6 +28,7 @@ export const incomingMessageHandler = (hl7MessageString: string) => {
   return composeDecodedMessage(decodedMessage, messageType);
 };
 
+//TODO la extracción de la versión depende del la propia versión
 export const extracHl7Version = (messageSegmentLines: MessageSegmentPart[]): string => {
   const messageLine = messageSegmentLines.find((part) => part.hl7SegmentName === Hl7Segment.MessageHeader);
   const splited = messageLine.hl7SegmentContent.split("|");
@@ -52,6 +53,7 @@ export const decodeGenericMessage = (lines: MessageSegmentPart[], hl7Version: Hl
   return decodedMessage;
 };
 
+//TODO revisar factory (?), try catch al guradar, devolver lo que se guarda.
 export const composeDecodedMessage = async (decodedMessage: any[], messageType: Hl7MessageType): Promise<ADTA31MessageI | ADTA40MessageI | OMGO19MessageI | ORUR01MessageI | GenericMessageI> => {
   const id = uuidv4();
   switch (messageType) {

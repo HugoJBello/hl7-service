@@ -32,9 +32,11 @@ describe("POST /adt-a31", () => {
     try {
       const resp: any = await request(app).post("/adt-a31").send(result);
 
-      expect(resp).toBeDefined()
+      expect(resp).toBeDefined();
+      expect(resp.body.data.messageHeader).toBeDefined();
+      console.log(resp)
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
 
     appHl7.stop();

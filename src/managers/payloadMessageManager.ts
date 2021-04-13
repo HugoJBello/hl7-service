@@ -38,6 +38,7 @@ export const separateSegmentPart = (hl7Payload: string): MessageSegmentPart[] =>
   return messageParts;
 };
 
+//TODO revisar si se puede extraer el tipo de mensaje desde la cabecera
 export const classifyMessage = (message: MessageSegmentPart[]): Hl7MessageType => {
   const segmentNames: string[] = message.map((message: MessageSegmentPart) => message.hl7SegmentName);
 

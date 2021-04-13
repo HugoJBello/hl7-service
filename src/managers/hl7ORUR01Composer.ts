@@ -11,7 +11,7 @@ export const composeORUR01 = (orur01MessageI: ORUR01MessageI): string => {
   const OBX = orur01MessageI.observationResult;
 
 
-  const segments = [MSH, PID, PV1, ORC, OBR, OBX].filter(item => !!item);;
+  const segments = [MSH, PID, PV1, ORC, OBR, OBX].filter(item => !!item);
   return composeGenericMessage(segments);
 };
 

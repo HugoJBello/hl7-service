@@ -1,0 +1,120 @@
+{
+  messageHeader: {
+    encodingCharacters: '^~\\&',
+    sendingApplication: 'IMDH',
+    sendingFacility: '034280100^FJ',
+    receivingApplication: 'QUIRONSALUD',
+    receivingFacility: '034280100',
+    dateTimeOfMessage: 2020-05-22T12:18:11.000Z,
+    messageType: 'ADT^A31^ADT_A05',
+    messageControlID: '20052214051160855200',
+    processingID: 'T',
+    versionID: '2.5',
+    acceptAcknowledgmentType: 'AL',
+    applicationAcknowledgmentType: 'NE',
+    hl7Segment: 'MSH',
+    hl7Version: '2.5'
+  },
+  eventType: {
+    recordedDateTime: 2020-05-22T12:18:11.000Z,
+    eventOccurred: 2020-05-22T12:18:11.000Z,
+    hl7Segment: 'EVN',
+    hl7Version: '2.5'
+  },
+  patientIdentification: {
+    setIDPID: '1',
+    patientIdentifierList: [
+      '900210',
+      '',
+      '',
+      '',
+      'PI~X4985703Q',
+      '',
+      '',
+      '',
+      'NNESP~281200767986',
+      '',
+      '',
+      'SS',
+      'HC~ZCXX740453380018',
+      '',
+      '',
+      'SS',
+      'CIP~%B803416\\S\\ZCXX740453380018\\S\\1105601552\\S\\ZUCCHI VALENTINA \\S\\010002011\\R\\8034161105601552=001112000000\\R\\',
+      '',
+      '',
+      '',
+      'CIP~1105601552',
+      '',
+      '',
+      'CAM',
+      'JHN~BBBBBBBBBX844306',
+      '',
+      '',
+      'MS',
+      'NI~ZCXX197404530',
+      '',
+      '',
+      '',
+      'MR'
+    ],
+    patientName: [ 'ZU', 'VALENTINA' ],
+    dateTimeOfBirth: 1974-04-12T23:00:00.000Z,
+    administrativeSex: 'F',
+    patientAddress: [
+      'CALLE&CALLE DEL C 16 ENTREP DCHA&16',
+      'ENTREP DCHA',
+      '280796',
+      '28',
+      '28015',
+      '724',
+      'H'
+    ],
+    phoneNumberHome: [
+      '686300634',
+      'PRN',
+      'PH~686300634',
+      'ORN',
+      'PH~679215660',
+      'PRN',
+      'CP~miguel.martinez@gfi.world',
+      'NET',
+      'Internet'
+    ],
+    hl7Segment: 'PID',
+    hl7Version: '2.5'
+  },
+  patientAdditionalDemographic: {
+    patientPrimaryFacility: [ '16070310', '', '', '', '', '', '', '28421' ],
+    protectionIndicator: 'N',
+    hl7Segment: 'PD1',
+    hl7Version: '2.5'
+  },
+  role: {
+    actionCode: 'UC',
+    roleROL: 'MAP',
+    rolePerson: '1607030106G',
+    hl7Segment: 'ROL',
+    hl7Version: '2.5'
+  },
+  patientVisit: {
+    setIDPV1: '1',
+    patientClass: 'H',
+    hl7Segment: 'PV1',
+    hl7Version: '2.5'
+  },
+  guarator: {
+    setIDGT1: '1',
+    guarantorOrganizationName: [
+      '',     '', '1011',
+      '',     '', '',
+      '',     '', '',
+      '1141'
+    ],
+    hl7Segment: 'GT1',
+    hl7Version: '2.5'
+  },
+  hl7Version: '2.5',
+  hl7MessageType: 'ADT_A31',
+  id: '20b1dc41-012b-42d6-ac41-a99b50cba058'
+}

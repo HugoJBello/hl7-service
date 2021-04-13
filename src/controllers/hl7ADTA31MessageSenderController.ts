@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Status } from "../models/HL7Message";
 import { sendMessage } from "../managers/hl7MessageSender";
 
+//TODO encampsular en funciones, rodear de try catch y retornar posibles errores.
 export const hl7ADTA31MessageSenderController = async (req: Request, res: Response): Promise<void> => {
 
   const adta31Message = req.body as ADTA31MessageI;

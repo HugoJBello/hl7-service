@@ -7,6 +7,8 @@ const messageHeaderHl7StringExample = "MSH|^~\&|^^|MA0000^^|^^|GA0000^^|20111105
 describe("Hl7 works", () => {
   it("runs", (done) => {
     appHl7.start(7777);
+
+
     const client = hl7.Server.createTcpClient("localhost", 7777);
 
     const msg = new hl7.Message(
